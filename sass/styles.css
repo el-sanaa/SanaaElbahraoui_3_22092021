@@ -1,0 +1,469 @@
+body {
+  margin: 0 auto;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.logo {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Shrikhand", sans-serif;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.logoheader {
+  text-align: center;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  background-color: #E0E0E0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: inset 0 7px 10px -6px grey;
+  font-weight: 700;
+}
+
+.fasgps {
+  padding-right: 10px;
+}
+
+a {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+element.style {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+i {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.introduction {
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reservation {
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.selection {
+  text-align: center;
+  padding: 15px 30px 30px 30px;
+}
+
+.to_explore {
+  padding-bottom: 50px;
+  background-color: #F5F5F5;
+}
+
+.btnexplor {
+  background: linear-gradient(337deg, #f499fb 31%, #ec5cbd 88%);
+  padding: 15px 30px 15px 30px;
+  border-radius: 30px 30px 30px 30px;
+  border: none;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 7px 10px -6px grey;
+  width: 220px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.functioning {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 2em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.steps {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: auto;
+}
+
+.step {
+  margin-left: 35px;
+  width: 30%;
+  padding-bottom: 30px;
+  margin-right: 35px;
+}
+
+.step:hover .choicebtn, .step:hover .compositionbtn, .step:hover .tastingbtn {
+  background-color: #D8BFD8;
+}
+
+a {
+  text-decoration: none;
+}
+
+.choicebtn {
+  text-align: left;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 15px;
+  border-radius: 15px 15px 15px 15px;
+  width: 100%;
+  border: none;
+  box-shadow: 0 7px 10px -6px grey;
+  background-color: #F5F5F5;
+}
+
+.compositionbtn {
+  text-align: left;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  margin-bottom: 15px;
+  border-radius: 15px 15px 15px 15px;
+  width: 100%;
+  border: none;
+  box-shadow: 0 7px 10px -6px grey;
+  box-shadow: 0 7px 10px -6px grey;
+  background-color: #F5F5F5;
+}
+
+.tastingbtn {
+  text-align: left;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  margin-bottom: 15px;
+  width: 100%;
+  border-radius: 15px 15px 15px 15px;
+  border: none;
+  box-shadow: 0 7px 10px -6px grey;
+  background-color: #F5F5F5;
+}
+
+.number {
+  background-color: #9356DC;
+  border-radius: 50%;
+  height: 3px;
+  padding: 5px 10px 5px 8px;
+  width: 3px;
+  color: white;
+  margin-left: -13px;
+  line-height: 5px;
+}
+
+.fa-mobile-alt {
+  padding-left: 15px;
+  padding-right: 15px;
+  color: grey;
+  font-size: 15px;
+}
+
+.fa-list {
+  padding-left: 15px;
+  padding-right: 15px;
+  color: grey;
+  font-size: 15px;
+}
+
+.fa-store {
+  padding-left: 15px;
+  padding-right: 15px;
+  color: grey;
+  font-size: 15px;
+}
+
+.fbtn {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.restaurants {
+  background-color: #F5F5F5;
+  width: 100%;
+}
+
+.restaurants .restaurant {
+  width: 100%;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  font-weight: 700;
+}
+
+.img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card {
+  border-radius: 20px;
+  background-color: white;
+  overflow: hidden;
+  border: 4px solid white;
+  width: 30%;
+  height: 200px;
+  box-shadow: 0 0 10px grey;
+  color: black;
+  text-decoration: none;
+}
+
+.btnnew {
+  border: none;
+  background-color: #99E2D0;
+  color: darkcyan;
+  padding: 7px 32px;
+  position: relative;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 10px 10px;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.img1 {
+  background-image: url("../pictures/lapalettedugout.jpg");
+  border-radius: 15px 15px 0 0;
+  height: 350px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.img2 {
+  background-image: url("../pictures/lanote.jpg");
+  border-radius: 15px 15px 0 0;
+  height: 350px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.img3 {
+  background-image: url("../pictures/alafrancaise.jpg");
+  border-radius: 15px 15px 0 0;
+  height: 350px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.img4 {
+  background-image: url("../pictures/ledelice.jpg");
+  border-radius: 15px 15px 0 0;
+  height: 350px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.card_detail {
+  color: black;
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 7px 10px -6px grey;
+  box-shadow: 0 7px 10px -6px grey;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.card_name {
+  width: 80%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+}
+
+.heart {
+  width: 20%;
+  font-size: 30px;
+  padding-top: 15px;
+  font-weight: 400;
+}
+
+.heart > .far + .fas,
+.heart:hover > .far {
+  display: none;
+  background: linear-gradient(337deg, #f499fb 31%, #ec5cbd 88%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heart:hover > .far + .fas {
+  display: inherit;
+}
+
+footer {
+  background-color: black;
+  padding-left: 0;
+  color: white;
+  width: 100%;
+}
+footer a {
+  color: white;
+}
+
+.logoend {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 40px;
+  font-family: "Shrikhand", sans-serif;
+}
+
+.fa-utensils {
+  padding-right: 13px;
+}
+
+.fa-handshake {
+  padding-right: 7px;
+  padding-bottom: 5px;
+}
+
+.commercial_link {
+  padding-bottom: 5px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.commercial_linktwo {
+  text-align: center;
+  font-size: 30px;
+}
+
+.information {
+  padding-bottom: 5px;
+  text-align: center;
+  font-size: 30px;
+}
+
+.contact {
+  padding-bottom: 30px;
+  text-align: center;
+  font-size: 30px;
+}
+
+@media screen and (max-width: 376px) {
+  body {
+    max-width: 376px;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+
+  .location a {
+    font-size: 15px;
+  }
+
+  .reservation {
+    font-size: 23px;
+    text-align: center;
+  }
+
+  .btnexplor {
+    font-size: 15px;
+    margin-left: 40px;
+    margin-right: 20px;
+  }
+
+  img {
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+
+  .functioning {
+    font-size: 23px;
+    text-align: start;
+    margin-left: 15px;
+  }
+
+  .steps {
+    flex-direction: column;
+  }
+
+  .steps .step {
+    margin-left: 25px;
+    margin-right: 25px;
+    width: auto;
+    padding-bottom: 10px;
+  }
+
+  .fa-list .fa-store .fa-mobile-alt {
+    font-size: 11px;
+  }
+
+  .number {
+    font-size: 11px;
+  }
+
+  .fbtn {
+    font-size: 17px;
+    font-weight: 400;
+  }
+
+  .restaurants .restaurant {
+    font-size: 23px;
+    font-weight: 700;
+    text-align: start;
+    margin-left: 15px;
+  }
+
+  .restaurants .cardflex {
+    flex-direction: column;
+  }
+
+  .restaurants .cards {
+    flex: 25%;
+    float: left;
+    margin-left: 15px;
+  }
+
+  .btnnew {
+    font-size: 12px;
+    margin-right: 15px;
+  }
+
+  .img1, .img4, .img2, .img3 {
+    height: 200px;
+    width: auto;
+  }
+
+  .card_detail {
+    width: auto;
+    height: auto;
+  }
+
+  .card_name h2 {
+    font-size: 15px;
+  }
+
+  .card_name p {
+    font-size: 1px;
+  }
+
+  .heart {
+    font-size: 20px;
+  }
+}
+/*# sourceMappingURL=styles.css.map *//*# sourceMappingURL=styles.css.map */
