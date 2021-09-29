@@ -59,6 +59,7 @@
     font-family: "Roboto", sans-serif;
     margin: 0;
   }
+  
   .introduction{
     background-color: #F5F5F5;
     display: flex;
@@ -91,7 +92,15 @@
     box-shadow: 0 7px 10px -6px grey;
     width: 220px;
     margin-top: 30px;
+    background-size: 450%;
+    transition: 0.3s all ease-in-out;
     text-align: center;
+  }
+  .btnexplor:hover{
+    transition: 0.3s all ease-in-out;
+    box-shadow: 0 7px 10px -6px grey;
+    cursor: pointer;
+    background-position: right top;
   }
   .functioning {
     padding-top: 30px;
@@ -343,6 +352,282 @@ footer{
   text-align: center;
   font-size: 30px;
 }
+.picture{
+  width: 100%;
+  height: 350px;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  overflow: hidden;
+  cursor: pointer;
+  background-size: 100% 100%;
+  
+}
+.picture:hover{
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+.fa-arrow-left {
+  float: left;
+  padding-top: 20px;
+  padding-left: 20px;
+  font-size: 17px;
+}
+.firstline{
+  background-color: #F5F5F5;
+  border-radius: 30px 30px 0 0;
+}
+.presentation{
+  font-family: 'Shrikhand', sans-serif;
+  font-style: italic;
+  font-size: 40px;
+  padding-right: 45px;
+  padding-left: 15px;
+}
+.title{
+  padding-bottom: 10px;
+  padding-left: 15px;
+}
+h3{
+  display: inline-block;
+  border-bottom: 3px solid #99E2D0;
+  width: 40px;
+}
+.meals{
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px 15px 15px 15px;
+  background-color: white;
+  margin-top: 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: all 0.5s;
+  box-shadow: 0 7px 10px -6px grey;
+  animation: fadeIn 5s;
+  -moz-animation: fadeIn 5s;
+  -o-animation: fadeIn 5s;
+  -ms-animation: fadeIn 5s;
+}
+
+.h4{
+  font-weight: 700;
+  font-size: 20px;
+}
+.food p{
+ font-size: 17px;
+}
+.meals:hover .price {
+  padding-top: 25px;
+  padding-right: 26px;
+  padding-left: 150px;
+  -webkit-animation: run1b 1s 1;
+          animation: run1b 1s 1;
+}
+.price{
+  padding-top: 25px;
+  padding-right: 10px;
+  padding-left: 20px;
+}
+.meals .btn_circle
+{
+  height: 100%;
+  position: absolute;
+  background-color: #96DED1;
+  width: 0px;
+  padding-bottom: 0px;
+  right: 0;
+  float: right;
+  border-radius: 0px 15px 15px 0px;
+}
+.fa-check-circle
+{
+  color: white;
+  width: 15px;
+  height: 15px;
+  opacity: 0;
+  -webkit-transition: all 5s 1;
+  transition: all 5s 1;
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  right: 0px;
+}
+.order {
+  background: linear-gradient(337deg, #ec5cbd 31%, #9356DC 88%);
+  padding: 15px 30px 15px 30px;
+  border-radius: 30px 30px 30px 30px;
+  border: none;
+  margin-top: 35px;
+  margin-bottom: 30px;
+  width: 200px;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0 7px 10px -6px grey;
+  -webkit-box-shadow: 0 7px 10px -6px grey;
+  box-shadow: 0 7px 10px -6px grey;
+}
+
+.menudiv:hover .btnhov {
+  border-radius: 0px 15px 15px 0px;
+  -webkit-animation: widthgrow 1s ease 1 forwards;
+  animation: widthgrow 1s 1 ease forwards;
+  height: 100%;
+}
+
+.menudiv:hover .btnhov .fa-check-circle {
+  -webkit-animation: run 1s 1 forwards;
+          animation: run 1s 1 forwards;
+  opacity: 1;
+  right: 15px;
+  opacity: 100;
+}
+
+@-webkit-keyframes widthgrow {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 65px;
+  }
+}
+
+@-webkit-keyframes widthgrowb {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 65px;
+  }
+}
+
+@keyframes widthgrow {
+  0% {
+    padding-bottom: 5px !important;
+    width: 0px;
+  }
+  100% {
+    padding-bottom: 5px !important;
+    width: 65px;
+  }
+}
+
+@keyframes widthgrowb {
+  0% {
+    width: 65px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+
+@-webkit-keyframes run {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-15px);
+            transform: translate(-15px);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes run {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(-15px);
+            transform: translate(-15px);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes runb {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-15px);
+            transform: translate(-15px);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes runb {
+  0% {
+    opacity: 1;
+    -webkit-transform: translate(-15px);
+            transform: translate(-15px);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes run1 {
+  0% {
+    -webkit-transform: translate(65px);
+            transform: translate(65px);
+  }
+  100% {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+  }
+}
+
+@keyframes run1 {
+  0% {
+    -webkit-transform: translate(65px);
+            transform: translate(65px);
+  }
+  100% {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+  }
+}
+
+@-webkit-keyframes run1b {
+  0% {
+    -webkit-transform: translate(-60px);
+            transform: translate(-60px);
+  }
+  100% {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+  }
+}
+
+@keyframes run1b {
+  0% {
+    -webkit-transform: translate(-60px);
+            transform: translate(-60px);
+  }
+  100% {
+    -webkit-transform: translate(0px);
+            transform: translate(0px);
+  }
+}
+
 .loader {
   display: flex;
   justify-content: center;
@@ -403,7 +688,9 @@ footer{
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
+
 }
+
 
 
  @media screen and (max-width: 1074px){
@@ -487,10 +774,11 @@ footer{
     font-size: 17px;
     font-weight: 600;
   }
-  .restaurants .reservation{
+  .restaurants .restaurant{
     text-align: start;
     margin-left: 15px;
   }
+  
 }
 
 @media screen and (max-width: 376px)
@@ -606,15 +894,8 @@ footer{
     font-size: 20px;
   }
    
-  
-  
-  
+ 
 }
   
-
-
-
-  
-
 
 /*# sourceMappingURL=main.css.map */
