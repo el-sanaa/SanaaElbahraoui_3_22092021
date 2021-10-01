@@ -12,7 +12,7 @@
     $color-secondary: #ff79da;
     $color-tertiary: #99e2d0;
     $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
-    $white:white;
+    
     $font: 'Roboto', sans-serif;
     $light-grey: #F5F5F5;
     $grey: #E0E0E0;
@@ -59,7 +59,6 @@
     font-family: "Roboto", sans-serif;
     margin: 0;
   }
-  
   .introduction{
     background-color: #F5F5F5;
     display: flex;
@@ -83,7 +82,7 @@
    padding-bottom: 50px;
   }
   .btnexplor{
-    background: linear-gradient(337deg, #ec5cbd 31%, #9356DC 88%);
+    background: linear-gradient(337deg, #ec5cbd 31%, #DA70D6 88%);
     padding: 15px 30px 15px 30px;
     border-radius: 30px 30px 30px 30px;
     border: none;
@@ -225,13 +224,13 @@
     background-color: #99E2D0;
     color: darkcyan;
     padding: 7px 32px;
-    position: relative;
     text-decoration: none;
     font-size: 16px;
     margin: 10px 10px;
     cursor: pointer;
     font-weight: 700;
     border-radius: 3px 3px 3px 3px;
+    position: absolute;
   }
   .img1 {
     background-image: url("../pictures/lapalettedugout.jpg");
@@ -304,7 +303,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .heart:hover > .far + .fas {
   display: inherit;
 }
@@ -312,7 +310,7 @@ footer{
   background-color: black;
   padding-left: 0;
   color: white;
-  width: $width;
+  width: 100%;
     a{
       color: white;
     }
@@ -346,12 +344,13 @@ footer{
   text-align: center;
   font-size: 30px;
 }
-
 .contact {
   padding-bottom: 30px;
   text-align: center;
   font-size: 30px;
 }
+
+/*pages restaurants*/
 .picture{
   width: 100%;
   height: 350px;
@@ -360,7 +359,6 @@ footer{
   overflow: hidden;
   cursor: pointer;
   background-size: 100% 100%;
-  
 }
 .picture:hover{
   transform: scale(1.1);
@@ -372,25 +370,38 @@ footer{
   padding-left: 20px;
   font-size: 17px;
 }
+
 .firstline{
   background-color: #F5F5F5;
   border-radius: 30px 30px 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 .presentation{
   font-family: 'Shrikhand', sans-serif;
   font-style: italic;
   font-size: 40px;
-  padding-right: 45px;
   padding-left: 15px;
+  padding-top: 20px;
+  padding-right: 30px;
+}
+.presentations .heart{
+  padding-left: 20px;
 }
 .title{
-  padding-bottom: 10px;
-  padding-left: 15px;
+  padding-bottom: 0;
+  padding-left: 30px;
+  padding-top: 20px;
 }
 h3{
   display: inline-block;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
+  padding-top: 20px;
+}
+.secondline{
+  background-color: #F5F5F5;
 }
 .meals{
   display: flex;
@@ -398,36 +409,69 @@ h3{
   border-radius: 15px 15px 15px 15px;
   background-color: white;
   margin-top: 10px;
-  margin-right: 5px;
+  
   cursor: pointer;
   transition: all 0.5s;
   box-shadow: 0 7px 10px -6px grey;
-  animation: fadeIn 5s;
-  -moz-animation: fadeIn 5s;
-  -o-animation: fadeIn 5s;
-  -ms-animation: fadeIn 5s;
-}
+  animation: appear 5s;
+  -moz-animation: appear 5s;
+  -o-animation: appear 5s;
+  -ms-animation: apper 5s;
+  margin: 5px 20px 20px 20px;
+  justify-content: space-between;
+  }
+  @keyframes appear {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes appear {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes appear {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes appear {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes appear {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
 
-.h4{
+
+h4{
   font-weight: 700;
   font-size: 20px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  
 }
 .food p{
- font-size: 17px;
+ font-size: 14px;
+ padding-left: 10px;
+ padding-bottom: 10px;
+ 
 }
 .meals:hover .price {
   padding-top: 25px;
   padding-right: 26px;
   padding-left: 150px;
-  -webkit-animation: run1b 1s 1;
-          animation: run1b 1s 1;
+  -webkit-animation: fan 1s 1;
+          animation: fan 1s 1;
 }
 .price{
-  padding-top: 25px;
-  padding-right: 10px;
-  padding-left: 20px;
+  padding-top: 60px;
+  padding-right: 30px;
+  animation: fun 1s 1;
 }
-.meals .btn_circle
+.btn_circle
 {
   height: 100%;
   position: absolute;
@@ -451,67 +495,64 @@ h3{
   top: 40%;
   left: 40%;
   right: 0px;
+  animation: moving 1s 1;
 }
-.order {
-  background: linear-gradient(337deg, #ec5cbd 31%, #9356DC 88%);
+.order{
+  background: linear-gradient(337deg, #ec5cbd 31%, #DA70D6 88%);
   padding: 15px 30px 15px 30px;
   border-radius: 30px 30px 30px 30px;
   border: none;
-  margin-top: 35px;
-  margin-bottom: 30px;
-  width: 200px;
   color: white;
   font-weight: 700;
   box-shadow: 0 7px 10px -6px grey;
-  -webkit-box-shadow: 0 7px 10px -6px grey;
-  box-shadow: 0 7px 10px -6px grey;
+  width: 220px;
+  margin-top: 30px;
+  background-size: 450%;
+  transition: 0.3s all ease-in-out;
+  text-align: center;
+  font-size: 18px;
 }
-
-.menudiv:hover .btnhov {
+.order:hover{
+  transition: 0.3s all ease-in-out;
+  box-shadow: 0 7px 10px -6px grey;
+  cursor: pointer;
+  background-position: right top;
+}
+.price:hover{
+  padding-top: 25px;
+  padding-right: 26px;
+  right:65px;
+  animation: fanny 1s 1  forwards;
+}
+.btn_circle:hover {
   border-radius: 0px 15px 15px 0px;
-  -webkit-animation: widthgrow 1s ease 1 forwards;
-  animation: widthgrow 1s 1 ease forwards;
+  animation: circle 1s 1 ease forwards;
+  -webkit-animation: cirle 1s ease 1 forwards;
   height: 100%;
 }
 
-.menudiv:hover .btnhov .fa-check-circle {
-  -webkit-animation: run 1s 1 forwards;
-          animation: run 1s 1 forwards;
+.fa-check-circle:hover {
+  -webkit-animation: move 1s 1 forwards;
+          animation: move 1s 1 forwards;
   opacity: 1;
   right: 15px;
   opacity: 100;
 }
 
-@-webkit-keyframes widthgrow {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 65px;
-  }
-}
 
-@-webkit-keyframes widthgrowb {
+
+@keyframes circle {
   0% {
+    padding-bottom: 5px;
     width: 0px;
   }
   100% {
+    padding-bottom: 5px;
     width: 65px;
   }
 }
 
-@keyframes widthgrow {
-  0% {
-    padding-bottom: 5px !important;
-    width: 0px;
-  }
-  100% {
-    padding-bottom: 5px !important;
-    width: 65px;
-  }
-}
-
-@keyframes widthgrowb {
+@keyframes circle {
   0% {
     width: 65px;
   }
@@ -520,111 +561,47 @@ h3{
   }
 }
 
-@-webkit-keyframes run {
+
+@keyframes move {
   0% {
-    opacity: 0;
-    -webkit-transform: translate(0px);
-            transform: translate(0px);
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+      opacity: 0;
+      transform: translate(0px);
+      transform: rotate(0deg);
   }
   100% {
-    opacity: 1;
-    -webkit-transform: translate(-15px);
-            transform: translate(-15px);
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+      opacity: 1;
+      transform: translate(-15px);
+      transform: rotate(360deg);
   }
 }
 
-@keyframes run {
+@keyframes moving {
   0% {
-    opacity: 0;
-    -webkit-transform: translate(0px);
-            transform: translate(0px);
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+      opacity: 1;
+      transform: translate(-15px);
+      transform: rotate(360deg);
   }
   100% {
-    opacity: 1;
-    -webkit-transform: translate(-15px);
-            transform: translate(-15px);
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+      opacity: 0;
+      transform: rotate(0deg);
   }
 }
 
-@-webkit-keyframes runb {
+@keyframes fanny {
   0% {
-    opacity: 1;
-    -webkit-transform: translate(-15px);
-            transform: translate(-15px);
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+      transform: translate(65px);
   }
   100% {
-    opacity: 0;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+      transform: translate(0px);
   }
 }
 
-@keyframes runb {
+@keyframes fan {
   0% {
-    opacity: 1;
-    -webkit-transform: translate(-15px);
-            transform: translate(-15px);
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+      transform: translate(-60px);
   }
   100% {
-    opacity: 0;
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-}
-
-@-webkit-keyframes run1 {
-  0% {
-    -webkit-transform: translate(65px);
-            transform: translate(65px);
-  }
-  100% {
-    -webkit-transform: translate(0px);
-            transform: translate(0px);
-  }
-}
-
-@keyframes run1 {
-  0% {
-    -webkit-transform: translate(65px);
-            transform: translate(65px);
-  }
-  100% {
-    -webkit-transform: translate(0px);
-            transform: translate(0px);
-  }
-}
-
-@-webkit-keyframes run1b {
-  0% {
-    -webkit-transform: translate(-60px);
-            transform: translate(-60px);
-  }
-  100% {
-    -webkit-transform: translate(0px);
-            transform: translate(0px);
-  }
-}
-
-@keyframes run1b {
-  0% {
-    -webkit-transform: translate(-60px);
-            transform: translate(-60px);
-  }
-  100% {
-    -webkit-transform: translate(0px);
-            transform: translate(0px);
+      transform: translate(0px);
   }
 }
 
@@ -656,7 +633,7 @@ h3{
 .primary-circle {
   width: 150px;
   height: 150px;
-  border: 4px solid #9356dc;
+  border: 4px solid #DDA0DD;
   border-top: 4px solid transparent;
   border-radius: 50%;
   animation: rotate 1.5s infinite;
@@ -666,7 +643,7 @@ h3{
   animation: rotate 1.5s infinite 0.1s;
   width: 120px;
   height: 120px;
-  border: 4px solid #ff79da;
+  border: 4px solid #DA70D6;
   border-top: 4px solid transparent;
   border-radius: 50%;
   position: absolute;
@@ -676,7 +653,7 @@ h3{
   animation: rotate 1.5s infinite 0.2s;
   width: 80px;
   height: 80px;
-  border: 4px solid #99e2d0;
+  border: 4px solid white;
   border-top: 4px solid transparent;
   border-radius: 50%;
   position: absolute;
@@ -739,6 +716,7 @@ h3{
   .card_detail h2{
     font-size: 1.2em;
   }
+
 }  
 
 
@@ -778,6 +756,17 @@ h3{
     text-align: start;
     margin-left: 15px;
   }
+
+  /* Pages restaurants*/
+  .logoend, .commercial_link, .commercial_linktwo, .information, .contact {
+    text-align: start;
+    padding-left: 15px;
+    font-size: 21px;
+  }
+  .presentation{
+    font-size: 29px;
+  }
+
   
 }
 
@@ -845,12 +834,6 @@ h3{
   .card img{
     height: 68%;
   }
-  .img{
-    object-fit: cover;
-  }
-  .img{
-    object-fit: cover;
-  }
   .btnnew {
     padding: 7px 15px;
     position: relative;
@@ -893,8 +876,17 @@ h3{
     padding-left: 15px;
     font-size: 20px;
   }
+
+  /*page restaurant*/
+   .presentation{
+     font-size: 28px;
+   }
+   h3{
+     font-size: 15px;
+   }
    
- 
+ /* pages restaurants*/
+
 }
   
 

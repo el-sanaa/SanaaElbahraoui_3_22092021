@@ -76,7 +76,7 @@ i {
 }
 
 .btnexplor {
-  background: linear-gradient(337deg, #ec5cbd 31%, #9356DC 88%);
+  background: linear-gradient(337deg, #ec5cbd 31%, #DA70D6 88%);
   padding: 15px 30px 15px 30px;
   border-radius: 30px 30px 30px 30px;
   border: none;
@@ -236,13 +236,13 @@ a {
   background-color: #99E2D0;
   color: darkcyan;
   padding: 7px 32px;
-  position: relative;
   text-decoration: none;
   font-size: 16px;
   margin: 10px 10px;
   cursor: pointer;
   font-weight: 700;
   border-radius: 3px 3px 3px 3px;
+  position: absolute;
 }
 
 .img1 {
@@ -370,6 +370,7 @@ footer a {
   font-size: 30px;
 }
 
+/*pages restaurants*/
 .picture {
   width: 100%;
   height: 350px;
@@ -396,25 +397,39 @@ footer a {
 .firstline {
   background-color: #F5F5F5;
   border-radius: 30px 30px 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .presentation {
   font-family: "Shrikhand", sans-serif;
   font-style: italic;
   font-size: 40px;
-  padding-right: 45px;
   padding-left: 15px;
+  padding-top: 20px;
+  padding-right: 30px;
+}
+
+.presentations .heart {
+  padding-left: 20px;
 }
 
 .title {
-  padding-bottom: 10px;
-  padding-left: 15px;
+  padding-bottom: 0;
+  padding-left: 30px;
+  padding-top: 20px;
 }
 
 h3 {
   display: inline-block;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
+  padding-top: 20px;
+}
+
+.secondline {
+  background-color: #F5F5F5;
 }
 
 .meals {
@@ -423,41 +438,63 @@ h3 {
   border-radius: 15px 15px 15px 15px;
   background-color: white;
   margin-top: 10px;
-  margin-right: 5px;
   cursor: pointer;
   transition: all 0.5s;
   box-shadow: 0 7px 10px -6px grey;
-  -webkit-animation: fadeIn 5s;
-          animation: fadeIn 5s;
-  -moz-animation: fadeIn 5s;
-  -o-animation: fadeIn 5s;
-  -ms-animation: fadeIn 5s;
+  -webkit-animation: appear 5s;
+          animation: appear 5s;
+  -moz-animation: appear 5s;
+  -o-animation: appear 5s;
+  -ms-animation: apper 5s;
+  margin: 5px 20px 20px 20px;
+  justify-content: space-between;
 }
 
-.h4 {
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+h4 {
   font-weight: 700;
   font-size: 20px;
+  margin-bottom: 10px;
+  padding-left: 10px;
 }
 
 .food p {
-  font-size: 17px;
+  font-size: 14px;
+  padding-left: 10px;
+  padding-bottom: 10px;
 }
 
 .meals:hover .price {
   padding-top: 25px;
   padding-right: 26px;
   padding-left: 150px;
-  -webkit-animation: run1b 1s 1;
-  animation: run1b 1s 1;
+  -webkit-animation: fan 1s 1;
+  animation: fan 1s 1;
 }
 
 .price {
-  padding-top: 25px;
-  padding-right: 10px;
-  padding-left: 20px;
+  padding-top: 60px;
+  padding-right: 30px;
+  -webkit-animation: fun 1s 1;
+          animation: fun 1s 1;
 }
 
-.meals .btn_circle {
+.btn_circle {
   height: 100%;
   position: absolute;
   background-color: #96DED1;
@@ -479,64 +516,78 @@ h3 {
   top: 40%;
   left: 40%;
   right: 0px;
+  -webkit-animation: moving 1s 1;
+          animation: moving 1s 1;
 }
 
 .order {
-  background: linear-gradient(337deg, #ec5cbd 31%, #9356DC 88%);
+  background: linear-gradient(337deg, #ec5cbd 31%, #DA70D6 88%);
   padding: 15px 30px 15px 30px;
   border-radius: 30px 30px 30px 30px;
   border: none;
-  margin-top: 35px;
-  margin-bottom: 30px;
-  width: 200px;
   color: white;
   font-weight: 700;
   box-shadow: 0 7px 10px -6px grey;
-  box-shadow: 0 7px 10px -6px grey;
+  width: 220px;
+  margin-top: 30px;
+  background-size: 450%;
+  transition: 0.3s all ease-in-out;
+  text-align: center;
+  font-size: 18px;
 }
 
-.menudiv:hover .btnhov {
+.order:hover {
+  transition: 0.3s all ease-in-out;
+  box-shadow: 0 7px 10px -6px grey;
+  cursor: pointer;
+  background-position: right top;
+}
+
+.price:hover {
+  padding-top: 25px;
+  padding-right: 26px;
+  right: 65px;
+  -webkit-animation: fanny 1s 1 forwards;
+          animation: fanny 1s 1 forwards;
+}
+
+.btn_circle:hover {
   border-radius: 0px 15px 15px 0px;
-  -webkit-animation: widthgrow 1s ease 1 forwards;
-  animation: widthgrow 1s 1 ease forwards;
+  animation: circle 1s 1 ease forwards;
+  -webkit-animation: cirle 1s ease 1 forwards;
   height: 100%;
 }
 
-.menudiv:hover .btnhov .fa-check-circle {
-  -webkit-animation: run 1s 1 forwards;
-  animation: run 1s 1 forwards;
+.fa-check-circle:hover {
+  -webkit-animation: move 1s 1 forwards;
+  animation: move 1s 1 forwards;
   opacity: 1;
   right: 15px;
   opacity: 100;
 }
 
-@-webkit-keyframes widthgrow {
+@-webkit-keyframes circle {
   0% {
-    width: 0;
-  }
-  100% {
-    width: 65px;
-  }
-}
-@-webkit-keyframes widthgrowb {
-  0% {
+    padding-bottom: 5px;
     width: 0px;
   }
   100% {
+    padding-bottom: 5px;
     width: 65px;
   }
 }
-@keyframes widthgrow {
+
+@keyframes circle {
   0% {
-    padding-bottom: 5px !important;
+    padding-bottom: 5px;
     width: 0px;
   }
   100% {
-    padding-bottom: 5px !important;
+    padding-bottom: 5px;
     width: 65px;
   }
 }
-@keyframes widthgrowb {
+@keyframes circle {
   0% {
     width: 65px;
   }
@@ -544,7 +595,7 @@ h3 {
     width: 0px;
   }
 }
-@-webkit-keyframes run {
+@-webkit-keyframes move {
   0% {
     opacity: 0;
     transform: translate(0px);
@@ -556,7 +607,7 @@ h3 {
     transform: rotate(360deg);
   }
 }
-@keyframes run {
+@keyframes move {
   0% {
     opacity: 0;
     transform: translate(0px);
@@ -568,7 +619,7 @@ h3 {
     transform: rotate(360deg);
   }
 }
-@-webkit-keyframes runb {
+@-webkit-keyframes moving {
   0% {
     opacity: 1;
     transform: translate(-15px);
@@ -579,7 +630,7 @@ h3 {
     transform: rotate(0deg);
   }
 }
-@keyframes runb {
+@keyframes moving {
   0% {
     opacity: 1;
     transform: translate(-15px);
@@ -590,7 +641,7 @@ h3 {
     transform: rotate(0deg);
   }
 }
-@-webkit-keyframes run1 {
+@-webkit-keyframes fanny {
   0% {
     transform: translate(65px);
   }
@@ -598,7 +649,7 @@ h3 {
     transform: translate(0px);
   }
 }
-@keyframes run1 {
+@keyframes fanny {
   0% {
     transform: translate(65px);
   }
@@ -606,7 +657,7 @@ h3 {
     transform: translate(0px);
   }
 }
-@-webkit-keyframes run1b {
+@-webkit-keyframes fan {
   0% {
     transform: translate(-60px);
   }
@@ -614,7 +665,7 @@ h3 {
     transform: translate(0px);
   }
 }
-@keyframes run1b {
+@keyframes fan {
   0% {
     transform: translate(-60px);
   }
@@ -664,7 +715,7 @@ h3 {
 .primary-circle {
   width: 150px;
   height: 150px;
-  border: 4px solid #9356dc;
+  border: 4px solid #DDA0DD;
   border-top: 4px solid transparent;
   border-radius: 50%;
   -webkit-animation: rotate 1.5s infinite;
@@ -676,7 +727,7 @@ h3 {
           animation: rotate 1.5s infinite 0.1s;
   width: 120px;
   height: 120px;
-  border: 4px solid #ff79da;
+  border: 4px solid #DA70D6;
   border-top: 4px solid transparent;
   border-radius: 50%;
   position: absolute;
@@ -687,7 +738,7 @@ h3 {
           animation: rotate 1.5s infinite 0.2s;
   width: 80px;
   height: 80px;
-  border: 4px solid #99e2d0;
+  border: 4px solid white;
   border-top: 4px solid transparent;
   border-radius: 50%;
   position: absolute;
@@ -801,6 +852,17 @@ h3 {
     text-align: start;
     margin-left: 15px;
   }
+
+  /* Pages restaurants*/
+  .logoend, .commercial_link, .commercial_linktwo, .information, .contact {
+    text-align: start;
+    padding-left: 15px;
+    font-size: 21px;
+  }
+
+  .presentation {
+    font-size: 29px;
+  }
 }
 @media screen and (max-width: 376px) {
   body {
@@ -880,16 +942,6 @@ h3 {
     height: 68%;
   }
 
-  .img {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-
-  .img {
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-
   .btnnew {
     padding: 7px 15px;
     position: relative;
@@ -938,5 +990,16 @@ h3 {
     padding-left: 15px;
     font-size: 20px;
   }
+
+  /*page restaurant*/
+  .presentation {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  /* pages restaurants*/
 }
 /*# sourceMappingURL=styles.css.map *//*# sourceMappingURL=styles.css.map */
