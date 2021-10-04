@@ -3,7 +3,7 @@
 
 
   body {
-    margin: 0 auto;
+    margin: auto;
     width: 100%;
     border-radius: 15px;
     $font-title: "Shrikhand", cursive;
@@ -12,8 +12,6 @@
     $color-secondary: #ff79da;
     $color-tertiary: #99e2d0;
     $shadow-card: rgba(0, 0, 0, 0.25) 0px 15px 30px -12px;
-    
-    $font: 'Roboto', sans-serif;
     $light-grey: #F5F5F5;
     $grey: #E0E0E0;
     $shadow: inset 0 7px 10px -6px grey;
@@ -83,7 +81,7 @@
   }
   .btnexplor{
     background: linear-gradient(337deg, #ec5cbd 31%, #DA70D6 88%);
-    padding: 15px 30px 15px 30px;
+    padding: 25px 30px;
     border-radius: 30px 30px 30px 30px;
     border: none;
     color: white;
@@ -112,6 +110,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     width: auto;
+    
 
   }
   .step {
@@ -121,7 +120,7 @@
     margin-right: 35px;
   }
   .step:hover .choicebtn, .step:hover .compositionbtn, .step:hover .tastingbtn {
-    background-color: #D8BFD8;
+    background-color: #DDA0DD;
   }
   a {
     text-decoration: none;
@@ -167,6 +166,9 @@
     color: grey;
     font-size: 18px;
   }
+  .fa-store:hover{
+    color: #BA55D3;
+  }
   .fbtn{
     font-size: 18px;
     font-weight: 700;
@@ -186,14 +188,13 @@
   .cards{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 20px;
+    
     margin-bottom: 60px;
   }
 
-  .img{
+  .picture{
     object-fit: cover;
-    border-radius: 15px 15px 0 0;
-    height: 350px;
+    height: 250px;
     width: 100%;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -202,9 +203,9 @@
     border-radius: 20px;
     background-color: white;
     overflow: hidden;
-    border: 4px solid white;
+   
     height: 350px;
-    box-shadow: 0 0 10px grey;
+    
     color: black;
     text-decoration: none;
     margin: 5px 25px 20px 20px;
@@ -231,40 +232,6 @@
     font-weight: 700;
     border-radius: 3px 3px 3px 3px;
     position: absolute;
-  }
-  .img1 {
-    background-image: url("../pictures/lapalettedugout.jpg");
-    border-radius: 15px 15px 0 0;
-    height: 350px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-  }
-  .img2 {
-    background-image: url("../pictures/lanote.jpg");
-    border-radius: 15px 15px 0 0;
-    height: 350px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-  }
-  
-  .img3 {
-    background-image: url("../pictures/alafrancaise.jpg");
-    border-radius: 15px 15px 0 0;
-    height: 350px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-  }
-  
-  .img4 {
-    background-image: url("../pictures/ledelice.jpg");
-    border-radius: 15px 15px 0 0;
-    height: 350px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
   }
   .card_detail {
     color: black;
@@ -353,10 +320,9 @@ footer{
 /*pages restaurants*/
 .picture{
   width: 100%;
-  height: 350px;
+  height: 550px;
   background-repeat: no-repeat;
   object-fit: cover;
-  overflow: hidden;
   cursor: pointer;
   background-size: 100% 100%;
 }
@@ -366,39 +332,60 @@ footer{
 }
 .fa-arrow-left {
   float: left;
-  padding-top: 20px;
+  padding-top: 40px;
   padding-left: 20px;
-  font-size: 17px;
+  font-size: 27px;
+  color: black;
+}
+.logo{
+  font-size: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .firstline{
   background-color: #F5F5F5;
   border-radius: 30px 30px 0 0;
   display: flex;
+  flex-direction: column;
+  
+ 
+}
+.presentations{
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: -50px;
+  border-radius: 30px 30px 0 0;
+  background-color: green;
 }
 .presentation{
   font-family: 'Shrikhand', sans-serif;
   font-style: italic;
   font-size: 40px;
   padding-left: 15px;
-  padding-top: 20px;
-  padding-right: 30px;
+  padding-right: 45px;
 }
-.presentations .heart{
+.heart{
   padding-left: 20px;
+  font-size: 40px;
+  padding-top: 10px;
 }
 .title{
   padding-bottom: 0;
-  padding-left: 30px;
+  padding-left: 15px;
   padding-top: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 h3{
   display: inline-block;
   border-bottom: 3px solid #99E2D0;
   width: 40px;
   padding-top: 20px;
+  font-size: 25px;
 }
 .secondline{
   background-color: #F5F5F5;
@@ -406,72 +393,147 @@ h3{
 .meals{
   display: flex;
   flex-direction: row;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 15px 15px;
   background-color: white;
-  margin-top: 10px;
-  
   cursor: pointer;
   transition: all 0.5s;
   box-shadow: 0 7px 10px -6px grey;
-  animation: appear 5s;
-  -moz-animation: appear 5s;
-  -o-animation: appear 5s;
-  -ms-animation: apper 5s;
+  -webkit-box-shadow:0 7px 10px -6px grey;
   margin: 5px 20px 20px 20px;
   justify-content: space-between;
-  }
-  @keyframes appear {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
+  animation: fadein 5s;
+    -moz-animation: fadein 5s; /* Firefox */
+    -webkit-animation: fadein 5s; /* Safari et Chrome */
+    -o-animation: fadein 5s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* sur Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* sur Safari et Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* sur Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+   
   
-  @-moz-keyframes appear {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-  
-  @-webkit-keyframes appear {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-  
-  @-o-keyframes appear {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-  
-  @-ms-keyframes appear {
-    0% {opacity:0;}
-    100% {opacity:1;}
-  }
-
-
-h4{
+.food h4{
   font-weight: 700;
-  font-size: 20px;
+  font-size: 25px;
   margin-bottom: 10px;
   padding-left: 10px;
-  
+  overflow: hidden;
+  text-overflow: ellipsis;  
 }
 .food p{
- font-size: 14px;
+ font-size: 20px;
  padding-left: 10px;
  padding-bottom: 10px;
- 
+ overflow: hidden;
+ text-overflow: ellipsis;
 }
-.meals:hover .price {
+.meals .price {
+  padding-top: 70px;
+  padding-right: 26px;
+  animation: run1b 1s 1;
+  -webkit-animation: ran1b 1s 1;
+  font-size: 20px;
+}
+@keyframes ran1b {
+  0% {
+      transform: translate(-60px);
+  }
+  100% {
+      transform: translate(0px);
+  }
+}
+
+.meals .price:hover{
   padding-top: 25px;
   padding-right: 26px;
-  padding-left: 150px;
-  -webkit-animation: fan 1s 1;
-          animation: fan 1s 1;
+  right:65px;
+  animation: run1 1s 1  forwards;
+  -webkit-animation: run1 1s 1 forwards;
+  }
+  @keyframes run1 {
+    0% {
+        transform: translate(65px);
+    }
+    100% {
+        transform: translate(0px);
+    }
+  }
+  
+.meals .btn_circle .fa-check
+{
+  animation: runb 1s 1 ;
+  color:white;
+  width:15px;
+  height:15px;
+  opacity: 0;
+  margin: 0;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  right: 0px;
 }
-.price{
-  padding-top: 60px;
-  padding-right: 30px;
-  animation: fun 1s 1;
+@keyframes runb {
+  0% {
+      opacity: 1;
+      transform: translate(-15px);
+      transform: rotate(360deg);
+  }
+  100% {
+      opacity: 0;
+      transform: rotate(0deg);
+  }
 }
-.btn_circle
+
+.meals .btn_circle .fa-check:hover {
+  animation: run 1s 1 forwards;
+  -webkit-animation: run 1s 1 forwards;
+  opacity: 1; 
+  right: 15px;
+  opacity: 100;
+  
+}  
+  @keyframes run {
+    0% {
+        opacity: 0;
+        transform: translate(0px);
+        transform: rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-15px);
+        transform: rotate(360deg);
+    }
+  }
+   
+.meals .btn_circle
 {
   height: 100%;
   position: absolute;
@@ -481,36 +543,79 @@ h4{
   right: 0;
   float: right;
   border-radius: 0px 15px 15px 0px;
+  animation: widthgrowb 1s 1 ;
+  -webkit-animation: widthgrowb 1s 1;
 }
-.fa-check-circle
-{
-  color: white;
-  width: 15px;
-  height: 15px;
-  opacity: 0;
-  -webkit-transition: all 5s 1;
-  transition: all 5s 1;
-  margin: 0;
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  right: 0px;
-  animation: moving 1s 1;
+@-webkit-keyframes widthgrowb {
+  0% {
+      width: 0px;
+    }
+    100% {
+      width: 65px;
+    }
+  }
+  @keyframes widthgrowb {
+
+    0% {
+        width: 65px;
+      }
+      100% {
+        width: 0px;
+      }
 }
+
+.meals .btn_circle:hover {
+  height: 100%;
+  border-radius: 0px 15px 15px 0px;
+  animation: widthgrow 1s 1 ease forwards;
+  -webkit-animation: widthgrow 1s ease 1 forwards;
+}
+@-webkit-keyframes widthgrow {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 65px;
+  }
+}
+@keyframes widthgrow {
+
+  0% {
+      padding-bottom: 5px;
+      width: 0px;
+    }
+    100% {
+      padding-bottom: 5px;
+      width: 65px;
+    }
+}
+@-webkit-keyframes widthgrow {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 65px;
+  }
+}
+
+
+
+
+
 .order{
   background: linear-gradient(337deg, #ec5cbd 31%, #DA70D6 88%);
-  padding: 15px 30px 15px 30px;
-  border-radius: 30px 30px 30px 30px;
+  padding: 20px 30px 20px 30px;
+  border-radius: 50px 50px;
   border: none;
   color: white;
   font-weight: 700;
   box-shadow: 0 7px 10px -6px grey;
-  width: 220px;
-  margin-top: 30px;
+  width: 320px;
+  margin-top: 60px;
   background-size: 450%;
   transition: 0.3s all ease-in-out;
   text-align: center;
-  font-size: 18px;
+  font-size: 28px;
 }
 .order:hover{
   transition: 0.3s all ease-in-out;
@@ -518,92 +623,15 @@ h4{
   cursor: pointer;
   background-position: right top;
 }
-.price:hover{
-  padding-top: 25px;
-  padding-right: 26px;
-  right:65px;
-  animation: fanny 1s 1  forwards;
+
+footer{
+  padding-top: 40px;
 }
-.btn_circle:hover {
-  border-radius: 0px 15px 15px 0px;
-  animation: circle 1s 1 ease forwards;
-  -webkit-animation: cirle 1s ease 1 forwards;
-  height: 100%;
+.commercial_link, .commercial_linktwo, 
+.information, .contact{
+  padding-top: 20px;
 }
 
-.fa-check-circle:hover {
-  -webkit-animation: move 1s 1 forwards;
-          animation: move 1s 1 forwards;
-  opacity: 1;
-  right: 15px;
-  opacity: 100;
-}
-
-
-
-@keyframes circle {
-  0% {
-    padding-bottom: 5px;
-    width: 0px;
-  }
-  100% {
-    padding-bottom: 5px;
-    width: 65px;
-  }
-}
-
-@keyframes circle {
-  0% {
-    width: 65px;
-  }
-  100% {
-    width: 0px;
-  }
-}
-
-
-@keyframes move {
-  0% {
-      opacity: 0;
-      transform: translate(0px);
-      transform: rotate(0deg);
-  }
-  100% {
-      opacity: 1;
-      transform: translate(-15px);
-      transform: rotate(360deg);
-  }
-}
-
-@keyframes moving {
-  0% {
-      opacity: 1;
-      transform: translate(-15px);
-      transform: rotate(360deg);
-  }
-  100% {
-      opacity: 0;
-      transform: rotate(0deg);
-  }
-}
-
-@keyframes fanny {
-  0% {
-      transform: translate(65px);
-  }
-  100% {
-      transform: translate(0px);
-  }
-}
-
-@keyframes fan {
-  0% {
-      transform: translate(-60px);
-  }
-  100% {
-      transform: translate(0px);
-  }
-}
 
 .loader {
   display: flex;
@@ -695,10 +723,20 @@ h4{
     font-size: 15px;
     font-weight: 600;
   }
+
+  /*page restaurant */
+  .picture{
+    width: 100%;
+    height: 400px;
+  }
+  
 }
 
 
 @media screen and (max-width: 1024px){
+  .picture{
+    height: 350px;
+  }
   .steps{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -716,19 +754,32 @@ h4{
   .card_detail h2{
     font-size: 1.2em;
   }
-
+  .heart{
+    font-size: 37px;
+  }
 }  
 
 
 @media screen and (max-width: 646px){
+  .reservation{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   .steps{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
+  .step{
+    margin-left: 25px;
+    width: auto;
+    padding-bottom: 10px;
+    margin-right: 25px;
+  }
   .cards{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-  } .fa-mobile-alt {
+  }
+  .fa-mobile-alt {
     padding-left: 15px;
     padding-right: 15px;
     font-size: 16px;
@@ -756,43 +807,157 @@ h4{
     text-align: start;
     margin-left: 15px;
   }
-
-  /* Pages restaurants*/
+  .contact{
+    padding-bottom: 60px;
+  }
+  .logoend, .commercial_link, .commercial_linktwo, .information, .contact {
+    font-size: 186px;
+  }  
+  
   .logoend, .commercial_link, .commercial_linktwo, .information, .contact {
     text-align: start;
     padding-left: 15px;
     font-size: 21px;
   }
   .presentation{
-    font-size: 29px;
+    font-size: 25px;
+    padding-left: 20px;
+  }
+  .heart{
+    padding-top: 25px;
+    text-align: start;
+    font-size: 34px;
   }
 
+/* page restaurant*/
+  .picture{
+    width: 100%;
+    height: 200px;
+  }
+  .fa-arrow-left {
+    font-size: 20px;
+    }
+  .logo{
+    font-size: 30px
+  }
+  .presentation{
+    font-size: 35px;
+  }
+  .heart{
+    font-size: 35px;
+    padding-top: 10px;
+  }
+  .food p{
+    font-size: 18px;
+  }
+  .price{
+    font-size: 18px
+  }
+  .food .h4{
+    font-size: 20px;
+  }
+  footer{
+    margin-top: 120px;
+  }
+  .logoend{
+    font-size: 22px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+  }
+  .commercial_link, .commercial_linktwo, .information,
+  .contact{
+    padding-bottom: 0;
+    padding-left: 20px;
+  }
+  .contact{
+    padding-bottom: 60px;
+  }
+  .fa-handshake, .fa-utensils{
+    font-size: 18px;
+  } 
+  .order{
+    border-radius: 50px 50px;
+    font-size: 25px;
+    padding: 25px 28px;
+  }
+
+}
+
+@media screen and (max-width: 592px) {
+  .presentation{
+    font-size: 29px;
+      }
+  .heart{
+    font-size: 29px;
+  } 
+  .presentation{
+    font-size: 27px;
+  }   
+  .food p{
+    font-size: 16px;
+  }
+  .food h4, h3{
+    font-size: 18px;
+  }
+  .meals .price{
+    font-size: 16px;
+    padding-top: 60px;
+  }
+  .order{
+    font-size: 18px;
+    padding: 20px 5px;
+    width: 220px;
+  }
+
+}
+@media screen and (max-width: 418px) {
+  .presentation{
+    font-size: 21px;
+  }
+  .heart{
+    font-size: 21px;
+  }
+  .food h4{
+    font-size: 17px;
+  }
+  .food p{
+    font-size: 14px
+  }
+  .meals .price{
+    font-size: 13px;
+  }
   
 }
 
-@media screen and (max-width: 376px)
-{
+
+@media screen and (max-width: 376px){
   body{
     width: auto;
   }
-  /*Hedear style*/
   .logo{
     font-size: 25px;
   }
   .location a{
     font-size: 15px;
   }
-  /*Main style*/
+  
   .reservation {
     font-size: 23px;
     text-align: center;
   }
+  .selection{
+    padding: 0 30px 5px 30px;
+  }
   .btnexplor{
-    font-size: 15px;
+    font-size: 16px;
+    padding: 15px 5px 15px 5px;
   }  
   .functioning{
-    font-size: 23px;
+    font-size: 22px;
     margin-left: 15px;
+    text-align: start;
+    padding-top: 50px;
+    padding-bottom: 20px;
   }
   .steps {
     flex-direction: column;
@@ -804,30 +969,40 @@ h4{
     width: auto;
     padding-bottom: 10px;
   }
-  .fa-list .fa-store .fa-mobile-alt {
-    font-size: 11px;
+  .fa-list, .fa-store, .fa-mobile-alt {
+    font-size: 18px;
   }
   .number{
     font-size: 11px;
+    padding: 6px 8px 6px 8px;
+  }
+  .fa-list:hover, .fa-store:hover, .fa-mobile-alt:hover {
+    color: #BA55D3;
   }
   .fbtn{
-    font-size: 17px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 700;
+    }
+    .choicebtn, .compositionbtn, .tastingbtn{
+      padding-top: 25px;
+      padding-bottom: 25px; 
     }
   .restaurants .restaurant{
     font-size: 23px;
     font-weight: 700;
     text-align: start;
     margin-left: 15px;
+    padding-top: 30px;
+    padding-bottom: 10px;
   }
   .restaurants{
-    margin-top: 40px;
+    margin-top: 30px;
   }
   .cards {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    margin-top: 5px;
   }
-  
   .cards .card{
     height: 220px;
   }
@@ -870,24 +1045,38 @@ h4{
   .card_name p{
     font-size: 12px;
   }
-  /*Footer style*/
+  
   .logoend, .commercial_link, .commercial_linktwo, .information, .contact {
     text-align: start;
     padding-left: 15px;
-    font-size: 20px;
+    font-size: 16px;
   }
-
-  /*page restaurant*/
+  .fa-utensils {
+    padding-right: 13px;
+  }
+  .fa-handshake {
+    padding-right: 7px;
+    padding-bottom: 5px;
+  }
+  .contact{
+    padding-bottom: 60px;
+  }
+  .picture{
+    height: 220px;
+  }
+  
    .presentation{
-     font-size: 28px;
+     font-size: 20px;
+     padding-left: 20px;
+   }
+   .heart{
+     padding-top: 25px;
+     text-align: center;
+     padding-top: 10px;
+     
    }
    h3{
      font-size: 15px;
    }
-   
- /* pages restaurants*/
-
 }
-  
-
 /*# sourceMappingURL=main.css.map */
