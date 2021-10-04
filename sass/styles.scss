@@ -320,7 +320,7 @@ footer{
 /*pages restaurants*/
 .picture{
   width: 100%;
-  height: 550px;
+  height: 700px;
   background-repeat: no-repeat;
   object-fit: cover;
   cursor: pointer;
@@ -357,9 +357,9 @@ footer{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: -50px;
-  border-radius: 30px 30px 0 0;
-  background-color: green;
+  border-radius: 50px 50px 0 0;
+  background-color: #f5f5f5;
+  margin-top: -50px;
 }
 .presentation{
   font-family: 'Shrikhand', sans-serif;
@@ -367,11 +367,12 @@ footer{
   font-size: 40px;
   padding-left: 15px;
   padding-right: 45px;
+  padding-top: 40px;
 }
 .heart{
   padding-left: 20px;
   font-size: 40px;
-  padding-top: 10px;
+  padding-top: 40px;
 }
 .title{
   padding-bottom: 0;
@@ -597,11 +598,6 @@ h3{
     width: 65px;
   }
 }
-
-
-
-
-
 .order{
   background: linear-gradient(337deg, #ec5cbd 31%, #DA70D6 88%);
   padding: 20px 30px 20px 30px;
@@ -631,8 +627,6 @@ footer{
 .information, .contact{
   padding-top: 20px;
 }
-
-
 .loader {
   display: flex;
   justify-content: center;
@@ -649,7 +643,7 @@ footer{
   animation-delay: 3s;
   animation-fill-mode: forwards;
 }
- 
+
 @keyframes spin {
   0% {
     transform: translateY(0%);
@@ -695,10 +689,7 @@ footer{
   }
 
 }
-
-
-
- @media screen and (max-width: 1074px){
+@media (min-width: 1024px) and (max-width: 1429.98px){
   .fa-mobile-alt {
     padding-left: 15px;
     padding-right: 15px;
@@ -727,15 +718,15 @@ footer{
   /*page restaurant */
   .picture{
     width: 100%;
-    height: 400px;
+    height: 590px;
   }
   
 }
 
-
-@media screen and (max-width: 1024px){
+@media (min-width: 650px) and (max-width: 1023.98px){
   .picture{
-    height: 350px;
+    height: 560px;
+    object-fit: cover;
   }
   .steps{
     display: grid;
@@ -759,178 +750,7 @@ footer{
   }
 }  
 
-
-@media screen and (max-width: 646px){
-  .reservation{
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  .steps{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .step{
-    margin-left: 25px;
-    width: auto;
-    padding-bottom: 10px;
-    margin-right: 25px;
-  }
-  .cards{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-  }
-  .fa-mobile-alt {
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 16px;
-  }
-  .fa-list {
-    padding-left: 15px;
-    padding-right: 15px;
-    color: grey;
-    font-size: 16px;
-  }
-  .fa-store {
-    padding-left: 15px;
-    padding-right: 15px;
-    color: grey;
-    font-size: 16px;
-  }
-  .number{
-    font-size: 16px;
-  }
-  .fbtn{
-    font-size: 17px;
-    font-weight: 600;
-  }
-  .restaurants .restaurant{
-    text-align: start;
-    margin-left: 15px;
-  }
-  .contact{
-    padding-bottom: 60px;
-  }
-  .logoend, .commercial_link, .commercial_linktwo, .information, .contact {
-    font-size: 186px;
-  }  
-  
-  .logoend, .commercial_link, .commercial_linktwo, .information, .contact {
-    text-align: start;
-    padding-left: 15px;
-    font-size: 21px;
-  }
-  .presentation{
-    font-size: 25px;
-    padding-left: 20px;
-  }
-  .heart{
-    padding-top: 25px;
-    text-align: start;
-    font-size: 34px;
-  }
-
-/* page restaurant*/
-  .picture{
-    width: 100%;
-    height: 200px;
-  }
-  .fa-arrow-left {
-    font-size: 20px;
-    }
-  .logo{
-    font-size: 30px
-  }
-  .presentation{
-    font-size: 35px;
-  }
-  .heart{
-    font-size: 35px;
-    padding-top: 10px;
-  }
-  .food p{
-    font-size: 18px;
-  }
-  .price{
-    font-size: 18px
-  }
-  .food .h4{
-    font-size: 20px;
-  }
-  footer{
-    margin-top: 120px;
-  }
-  .logoend{
-    font-size: 22px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-  }
-  .commercial_link, .commercial_linktwo, .information,
-  .contact{
-    padding-bottom: 0;
-    padding-left: 20px;
-  }
-  .contact{
-    padding-bottom: 60px;
-  }
-  .fa-handshake, .fa-utensils{
-    font-size: 18px;
-  } 
-  .order{
-    border-radius: 50px 50px;
-    font-size: 25px;
-    padding: 25px 28px;
-  }
-
-}
-
-@media screen and (max-width: 592px) {
-  .presentation{
-    font-size: 29px;
-      }
-  .heart{
-    font-size: 29px;
-  } 
-  .presentation{
-    font-size: 27px;
-  }   
-  .food p{
-    font-size: 16px;
-  }
-  .food h4, h3{
-    font-size: 18px;
-  }
-  .meals .price{
-    font-size: 16px;
-    padding-top: 60px;
-  }
-  .order{
-    font-size: 18px;
-    padding: 20px 5px;
-    width: 220px;
-  }
-
-}
-@media screen and (max-width: 418px) {
-  .presentation{
-    font-size: 21px;
-  }
-  .heart{
-    font-size: 21px;
-  }
-  .food h4{
-    font-size: 17px;
-  }
-  .food p{
-    font-size: 14px
-  }
-  .meals .price{
-    font-size: 13px;
-  }
-  
-}
-
-
-@media screen and (max-width: 376px){
+@media (min-width: 364px) and (max-width: 648.98px){
   body{
     width: auto;
   }
@@ -1045,6 +865,9 @@ footer{
   .card_name p{
     font-size: 12px;
   }
+  .heart{
+    padding-top: 10px;
+  }
   
   .logoend, .commercial_link, .commercial_linktwo, .information, .contact {
     text-align: start;
@@ -1061,20 +884,20 @@ footer{
   .contact{
     padding-bottom: 60px;
   }
-  .picture{
-    height: 220px;
-  }
+  /*Pages restaurants*/
   
-   .presentation{
-     font-size: 20px;
+  .picture{
+    height: 260px;
+    object-fit: cover;
+  }
+  .presentation{
+     font-size: 21px;
      padding-left: 20px;
    }
    .heart{
-     padding-top: 25px;
-     text-align: center;
      padding-top: 10px;
-     
-   }
+     text-align: left;
+    }
    h3{
      font-size: 15px;
    }
