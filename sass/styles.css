@@ -7,10 +7,11 @@ body {
 /*Style header*/
 .logo {
   text-align: center;
-  font-size: 40px;
+  font-size: 60px;
   font-family: "Shrikhand", sans-serif;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .location {
@@ -284,6 +285,7 @@ a {
 }
 
 footer {
+  padding-bottom: 40px;
   background-color: black;
   padding-left: 0;
   color: white;
@@ -835,21 +837,25 @@ footer {
     font-size: 37px;
   }
 }
-@media (min-width: 364px) and (max-width: 648.98px) {
+@media (min-width: 375px) and (max-width: 648.98px) {
   body {
     width: auto;
   }
 
   .logo {
-    font-size: 25px;
+    font-size: 45px;
+  }
+
+  .fasgps {
+    font-size: 23px;
   }
 
   .location a {
-    font-size: 15px;
+    font-size: 23px;
   }
 
   .reservation {
-    font-size: 23px;
+    font-size: 27px;
     text-align: center;
   }
 
@@ -922,10 +928,12 @@ footer {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     margin-top: 5px;
+    padding-bottom: 30px;
+    margin-bottom: 0;
   }
 
   .cards .card {
-    height: 220px;
+    height: 240px;
   }
 
   .card img {
@@ -962,7 +970,7 @@ footer {
 
   .heart {
     font-size: 20px;
-    padding-top: 15px;
+    padding-top: 10px;
     font-weight: lighter;
   }
 
@@ -974,18 +982,31 @@ footer {
     font-size: 12px;
   }
 
-  .heart {
-    padding-top: 10px;
+  footer {
+    padding-top: 23px;
+    padding-bottom: 20px;
   }
 
-  .logoend, .commercial_link, .commercial_linktwo, .information, .contact {
+  .logofooter .logoend {
     text-align: start;
-    padding-left: 15px;
+    padding: 10px 0 10px 15px;
     font-size: 16px;
   }
 
+  .commercial_link, .commercial_linktwo, .information {
+    text-align: start;
+    padding: 10px 0 0 15px;
+    font-size: 15px;
+  }
+
+  .contact {
+    text-align: start;
+    font-size: 15px;
+    padding: 10px 0 0 15px;
+  }
+
   .fa-utensils {
-    padding-right: 13px;
+    padding-right: 12px;
   }
 
   .fa-handshake {
