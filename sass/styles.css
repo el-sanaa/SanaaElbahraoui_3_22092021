@@ -5,11 +5,12 @@ body {
 }
 
 /*Style header*/
-.logo {
+.logoheader .logo {
   text-align: center;
   font-size: 60px;
   font-family: "Shrikhand", sans-serif;
   padding-bottom: 30px;
+  padding-top: 0;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -24,9 +25,10 @@ body {
   padding-bottom: 15px;
   box-shadow: inset 0 7px 10px -6px grey;
   font-weight: 700;
+  font-size: 30px;
 }
 
-.fasgps {
+.location .fasgps {
   padding-right: 10px;
 }
 
@@ -60,7 +62,7 @@ i {
 
 .reservation {
   text-align: center;
-  font-size: 25px;
+  font-size: 35px;
   font-weight: 700;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -69,6 +71,7 @@ i {
 .selection {
   text-align: center;
   padding: 15px 30px 30px 30px;
+  font-size: 27px;
 }
 
 .to_explore {
@@ -79,16 +82,17 @@ i {
 .btnexplor {
   background: linear-gradient(337deg, #ec5cbd 31%, #DA70D6 88%);
   padding: 25px 30px;
-  border-radius: 30px 30px 30px 30px;
+  border-radius: 50px 50px;
   border: none;
   color: white;
   font-weight: 700;
   box-shadow: 0 7px 10px -6px grey;
-  width: 220px;
+  width: 280px;
   margin-top: 30px;
   background-size: 450%;
   transition: 0.3s all ease-in-out;
   text-align: center;
+  font-size: 20px;
 }
 
 .btnexplor:hover {
@@ -113,10 +117,10 @@ i {
 }
 
 .step {
-  margin-left: 35px;
+  margin-left: 20px;
   width: auto;
   padding-bottom: 30px;
-  margin-right: 35px;
+  margin-right: 20px;
 }
 
 .step:hover .choicebtn, .step:hover .compositionbtn, .step:hover .tastingbtn {
@@ -132,8 +136,9 @@ a {
   padding-top: 30px;
   padding-bottom: 30px;
   margin-bottom: 15px;
-  border-radius: 15px 15px 15px 15px;
+  border-radius: 25px 25px;
   width: 100%;
+  height: 30px;
   border: none;
   box-shadow: 0 7px 10px -6px grey;
   background-color: #F5F5F5;
@@ -186,7 +191,6 @@ a {
   background-color: #F5F5F5;
   width: 100%;
 }
-
 .restaurants .restaurant {
   width: 100%;
   font-size: 2em;
@@ -199,39 +203,29 @@ a {
 .cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin-bottom: 60px;
+  margin-bottom: 0;
+  padding-bottom: 40px;
+  margin-right: 15px;
+  margin-left: 15px;
 }
-
-.picture {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 250px;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-}
-
 .cards .card {
   border-radius: 20px;
-  background-color: white;
+  background-color: #F5F5F5;
   overflow: hidden;
-  height: 350px;
+  height: 330px;
   color: black;
   text-decoration: none;
-  margin: 5px 25px 20px 20px;
-  width: 90%;
+  margin: 20px 20px;
+  width: auto;
 }
-
-.card img {
+.cards .card img {
   width: 100%;
   height: 70%;
 }
-
-.card:hover {
+.cards .card:hover {
   transform: scale(1.1);
 }
-
-.btnnew {
+.cards .btnnew {
   border: none;
   background-color: #99E2D0;
   color: darkcyan;
@@ -244,8 +238,7 @@ a {
   border-radius: 3px 3px 3px 3px;
   position: absolute;
 }
-
-.card_detail {
+.cards .card_detail {
   color: black;
   display: flex;
   flex-direction: row;
@@ -253,23 +246,32 @@ a {
   border-radius: 0 0 15px 15px;
   box-shadow: 0 7px 10px -6px grey;
   box-shadow: 0 7px 10px -6px grey;
-  margin-bottom: 15px;
   width: 100%;
 }
-
-.card_name {
+.cards .card_name {
   width: 80%;
   padding-top: 0;
   padding-bottom: 15px;
   padding-left: 15px;
 }
-
-.heart {
+.cards .card_name h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.cards .card_name p {
+  font-size: 17px;
+}
+.cards .heart {
   width: 20%;
   font-size: 30px;
-  padding-top: 20px;
+  padding-top: 15px;
   font-weight: 400;
   text-align: center;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
 }
 
 .heart > .far + .fas,
@@ -294,42 +296,35 @@ footer {
 footer a {
   color: white;
 }
-
-.logoend {
+footer .logoend {
   text-align: center;
   padding-top: 15px;
   padding-bottom: 15px;
   font-size: 40px;
   font-family: "Shrikhand", sans-serif;
 }
-
-.fa-utensils {
+footer .fa-utensils {
   padding-right: 13px;
 }
-
-.fa-handshake {
+footer .fa-handshake {
   padding-right: 7px;
   padding-bottom: 5px;
 }
-
-.commercial_link {
+footer .commercial_link {
   padding-bottom: 5px;
   text-align: center;
   font-size: 30px;
 }
-
-.commercial_linktwo {
+footer .commercial_linktwo {
   text-align: center;
   font-size: 30px;
 }
-
-.information {
+footer .information {
   padding-bottom: 5px;
   text-align: center;
   font-size: 30px;
 }
-
-.contact {
+footer .contact {
   padding-bottom: 30px;
   text-align: center;
   font-size: 30px;
@@ -803,12 +798,44 @@ footer {
     width: 100%;
     height: 590px;
   }
+
+  .logoheader .logo {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .fa-arrow-left {
+    font-size: 35px;
+    padding: 40px 20px 20px 40px;
+  }
+
+  .heart {
+    padding-right: 100px;
+  }
 }
 @media (min-width: 650px) and (max-width: 1023.98px) {
-  .picture {
-    height: 560px;
-    -o-object-fit: cover;
-       object-fit: cover;
+  /*page accueil*/
+  .logoheader .logo {
+    font-size: 40px;
+  }
+
+  .location .fasgps {
+    font-size: 25px;
+  }
+  .location a {
+    font-size: 25px;
+  }
+
+  .reservation {
+    font-size: 29px;
+  }
+
+  .selection {
+    font-size: 23px;
+  }
+
+  .to_explore .btnexplor {
+    width: 260px;
   }
 
   .steps {
@@ -836,35 +863,58 @@ footer {
   .heart {
     font-size: 37px;
   }
+
+  /*pages restaurants*/
+  .logoheader .logo {
+    padding-top: 20px;
+  }
+
+  .picture {
+    height: 390px;
+  }
+
+  .presentation {
+    font-size: 35px;
+    padding-left: 20px;
+  }
+
+  .heart {
+    font-size: 32px;
+    padding-right: 20px;
+  }
 }
 @media (min-width: 375px) and (max-width: 648.98px) {
+  /*page accueil*/
   body {
     width: auto;
   }
 
-  .logo {
-    font-size: 45px;
+  .logoheader .logo {
+    font-size: 40px;
   }
 
   .fasgps {
-    font-size: 23px;
+    font-size: 21px;
   }
 
   .location a {
-    font-size: 23px;
+    font-size: 22px;
   }
 
   .reservation {
-    font-size: 27px;
+    font-size: 25px;
     text-align: center;
   }
 
   .selection {
     padding: 0 30px 5px 30px;
   }
+  .selection P {
+    font-size: 22px;
+  }
 
   .btnexplor {
-    font-size: 16px;
+    font-size: 18px;
     padding: 15px 5px 15px 5px;
   }
 
@@ -880,21 +930,14 @@ footer {
     flex-direction: column;
     display: flex;
   }
-
-  .steps .step {
+  .steps .steps .step {
     margin-left: 25px;
     margin-right: 25px;
     width: auto;
     padding-bottom: 10px;
   }
-
-  .fa-list, .fa-store, .fa-mobile-alt {
+  .steps .fa-list, .steps .fa-store, .steps .fa-mobile-alt {
     font-size: 18px;
-  }
-
-  .number {
-    font-size: 11px;
-    padding: 6px 8px 6px 8px;
   }
 
   .fa-list:hover, .fa-store:hover, .fa-mobile-alt:hover {
@@ -911,17 +954,16 @@ footer {
     padding-bottom: 25px;
   }
 
+  .restaurants {
+    margin-top: 30px;
+  }
   .restaurants .restaurant {
     font-size: 23px;
     font-weight: 700;
     text-align: start;
-    margin-left: 15px;
-    padding-top: 30px;
-    padding-bottom: 10px;
-  }
-
-  .restaurants {
-    margin-top: 30px;
+    padding-top: 55px;
+    padding-bottom: 0;
+    padding-left: 35px;
   }
 
   .cards {
@@ -931,16 +973,13 @@ footer {
     padding-bottom: 30px;
     margin-bottom: 0;
   }
-
   .cards .card {
-    height: 240px;
+    height: 260px;
   }
-
-  .card img {
+  .cards .card img {
     height: 68%;
   }
-
-  .btnnew {
+  .cards .btnnew {
     padding: 7px 15px;
     position: relative;
     font-size: 14px;
@@ -948,8 +987,7 @@ footer {
     cursor: pointer;
     font-weight: 100;
   }
-
-  .card_detail {
+  .cards .card_detail {
     color: black;
     display: flex;
     flex-direction: row;
@@ -960,65 +998,64 @@ footer {
     width: 100%;
     height: 32%;
   }
-
-  .card_name {
+  .cards .card_name {
     width: 80%;
     padding-top: 0;
     padding-bottom: 15px;
     padding-left: 15px;
   }
-
-  .heart {
+  .cards .card_name h2 {
     font-size: 20px;
-    padding-top: 10px;
+    margin-bottom: 0;
+  }
+  .cards .card_name p {
+    font-size: 19px;
+  }
+  .cards .heart {
+    font-size: 25px;
+    padding-top: 20px;
     font-weight: lighter;
-  }
-
-  .card_name h2 {
-    font-size: 14px;
-  }
-
-  .card_name p {
-    font-size: 12px;
   }
 
   footer {
     padding-top: 23px;
     padding-bottom: 20px;
   }
-
-  .logofooter .logoend {
+  footer .logofooter .logoend {
     text-align: start;
     padding: 10px 0 10px 15px;
     font-size: 16px;
   }
-
-  .commercial_link, .commercial_linktwo, .information {
+  footer .commercial_link, footer .commercial_linktwo,
+footer .information {
     text-align: start;
     padding: 10px 0 0 15px;
     font-size: 15px;
   }
-
-  .contact {
+  footer .contact {
     text-align: start;
     font-size: 15px;
-    padding: 10px 0 0 15px;
+    padding: 10px 0 50px 15px;
   }
-
-  .fa-utensils {
+  footer .fa-utensils {
     padding-right: 12px;
   }
-
-  .fa-handshake {
+  footer .fa-handshake {
     padding-right: 7px;
     padding-bottom: 5px;
   }
 
-  .contact {
-    padding-bottom: 60px;
+  /*Pages restaurants*/
+  .logoheader .logo {
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .logoheader a .fa-arrow-left {
+    font-size: 22px;
+    padding-top: 23px;
   }
 
-  /*Pages restaurants*/
   .picture {
     height: 260px;
     -o-object-fit: cover;
@@ -1026,17 +1063,39 @@ footer {
   }
 
   .presentation {
-    font-size: 21px;
-    padding-left: 20px;
+    font-size: 22px;
+    padding-left: 15px;
   }
 
   .heart {
-    padding-top: 10px;
+    padding-top: 35px;
     text-align: left;
+    padding-right: 60px;
+    font-size: 30px;
   }
 
   h3 {
+    font-size: 19px;
+    font-weight: normal;
+  }
+
+  .food h4 {
+    font-size: 19px;
+    margin-top: 15px;
+  }
+  .food p {
+    font-size: 14px;
+  }
+
+  .meals .price {
     font-size: 15px;
+    padding-top: 50px;
+  }
+
+  .to_explore .order {
+    font-size: 18px;
+    width: 200px;
+    padding: 15px 20px;
   }
 }
 /*# sourceMappingURL=styles.css.map *//*# sourceMappingURL=styles.css.map */
