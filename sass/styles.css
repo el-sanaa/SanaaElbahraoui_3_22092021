@@ -4,7 +4,6 @@ body {
   border-radius: 15px;
 }
 
-/*Style header*/
 .logoheader .logo {
   text-align: center;
   font-size: 60px;
@@ -148,7 +147,7 @@ a {
   background-color: #9356DC;
   border-radius: 50%;
   height: 3px;
-  padding: 8px 15px 8px 15px;
+  padding: 8px 15px;
   width: 3px;
   color: white;
   margin-left: -13px;
@@ -157,21 +156,7 @@ a {
   font-size: 18px;
 }
 
-.fa-mobile-alt {
-  padding-left: 15px;
-  padding-right: 15px;
-  color: grey;
-  font-size: 18px;
-}
-
-.fa-list {
-  padding-left: 15px;
-  padding-right: 15px;
-  color: grey;
-  font-size: 18px;
-}
-
-.fa-store {
+.fa-mobile-alt, .fa-list, .fa-store {
   padding-left: 15px;
   padding-right: 15px;
   color: grey;
@@ -223,7 +208,7 @@ a {
   height: 70%;
 }
 .cards .card:hover {
-  transform: scale(1.1);
+  transform: scale(1);
 }
 .cards .btnnew {
   border: none;
@@ -303,21 +288,21 @@ footer .logoend {
   font-size: 40px;
   font-family: "Shrikhand", sans-serif;
 }
-footer .fa-utensils {
-  padding-right: 13px;
-}
-footer .fa-handshake {
-  padding-right: 7px;
-  padding-bottom: 5px;
-}
 footer .commercial_link {
   padding-bottom: 5px;
   text-align: center;
   font-size: 30px;
 }
+footer .commercial_link .fa-utensils {
+  padding-right: 13px;
+}
 footer .commercial_linktwo {
   text-align: center;
   font-size: 30px;
+}
+footer .commercial_linktwo .fa-handshake {
+  padding-right: 7px;
+  padding-bottom: 5px;
 }
 footer .information {
   padding-bottom: 5px;
@@ -342,8 +327,8 @@ footer .contact {
 }
 
 .picture:hover {
-  transform: scale(1.1);
-  -webkit-transform: scale(1.1);
+  transform: scale(1);
+  -webkit-transform: scale(1);
 }
 
 .fa-arrow-left {
@@ -517,7 +502,7 @@ h3 {
     transform: translate(0px);
   }
 }
-.meals .btn_circle .fa-check {
+.btn_circle .fa-check {
   -webkit-animation: runb 1s 1;
           animation: runb 1s 1;
   color: white;
@@ -554,7 +539,7 @@ h3 {
     transform: rotate(0deg);
   }
 }
-.meals .btn_circle .fa-check:hover {
+.btn_circle .fa-check:hover {
   animation: run 1s 1 forwards;
   -webkit-animation: run 1s 1 forwards;
   opacity: 1;
@@ -764,6 +749,7 @@ footer {
   }
 }
 @media (min-width: 1024px) and (max-width: 1429.98px) {
+  /*page accueil*/
   .fa-mobile-alt {
     padding-left: 15px;
     padding-right: 15px;
@@ -930,7 +916,7 @@ footer {
     flex-direction: column;
     display: flex;
   }
-  .steps .steps .step {
+  .steps .step {
     margin-left: 25px;
     margin-right: 25px;
     width: auto;
@@ -981,11 +967,13 @@ footer {
   }
   .cards .btnnew {
     padding: 7px 15px;
-    position: relative;
+    position: absolute;
     font-size: 14px;
     margin: 10px 10px;
     cursor: pointer;
     font-weight: 100;
+    top: 10px;
+    right: 10px;
   }
   .cards .card_detail {
     color: black;
