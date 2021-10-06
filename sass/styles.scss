@@ -120,7 +120,7 @@
     margin-right: 20px;
   }
   .step:hover .choicebtn, .step:hover .compositionbtn, .step:hover .tastingbtn {
-    background-color: #DDA0DD;
+    background-color: #f0dbff;
   }
   a {
     text-decoration: none;
@@ -155,8 +155,10 @@
     color: grey;
     font-size: 18px;
   }
+  .fa-mobile-alt:hover,.fa-list:hover, 
   .fa-store:hover{
-    color: #BA55D3;
+    color: #9356DC;
+    cursor: pointer;
   }
   .fbtn{
     font-size: 18px;
@@ -200,21 +202,7 @@
         -webkit-transform: scale(1);
         transform: scale(1);
         }
-      .btnnew {
-        border: none;
-        background-color: #99E2D0;
-        color: darkcyan;
-        padding: 7px 32px;
-        text-decoration: none;
-        font-size: 16px;
-        margin: 10px 10px;
-        cursor: pointer;
-        font-weight: 700;
-        border-radius: 3px 3px 3px 3px;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-      }
+      
       .card_detail {
         color: black;
         display: -webkit-box;
@@ -266,6 +254,22 @@
     }
   .heart:hover > .far + .fas {
     display: inherit;
+  }
+  .cards .btnnew {
+    border: none;
+    background-color: #99E2D0;
+    color: darkcyan;
+    padding: 7px 32px;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 10px 10px;
+    cursor: pointer;
+    font-weight: 700;
+    border-radius: 3px 3px 3px 3px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    
   }
   footer{
     padding-bottom: 40px;

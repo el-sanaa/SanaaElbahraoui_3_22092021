@@ -114,22 +114,18 @@ i {
   grid-template-columns: repeat(3, 1fr);
   width: auto;
 }
-
 .step {
   margin-left: 20px;
   width: auto;
   padding-bottom: 30px;
   margin-right: 20px;
 }
-
 .step:hover .choicebtn, .step:hover .compositionbtn, .step:hover .tastingbtn {
-  background-color: #DDA0DD;
+  background-color: #f0dbff;
 }
-
 a {
   text-decoration: none;
 }
-
 .choicebtn, .compositionbtn, .tastingbtn {
   text-align: left;
   padding-top: 30px;
@@ -142,7 +138,6 @@ a {
   box-shadow: 0 7px 10px -6px grey;
   background-color: #F5F5F5;
 }
-
 .number {
   background-color: #9356DC;
   border-radius: 50%;
@@ -155,23 +150,21 @@ a {
   font-style: normal;
   font-size: 18px;
 }
-
 .fa-mobile-alt, .fa-list, .fa-store {
   padding-left: 15px;
   padding-right: 15px;
   color: grey;
   font-size: 18px;
 }
-
-.fa-store:hover {
-  color: #BA55D3;
+.steps:hover .fa-mobile-alt, .steps:hover .fa-list,
+.steps:hover .fa-store {
+  color: #9356DC;
+  cursor: pointer;
 }
-
 .fbtn {
   font-size: 18px;
   font-weight: 700;
 }
-
 .restaurants {
   background-color: #F5F5F5;
   width: 100%;
@@ -184,7 +177,6 @@ a {
   padding-bottom: 30px;
   font-weight: 700;
 }
-
 .cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -209,21 +201,6 @@ a {
 }
 .cards .card:hover {
   transform: scale(1);
-}
-.cards .btnnew {
-  border: none;
-  background-color: #99E2D0;
-  color: darkcyan;
-  padding: 7px 32px;
-  text-decoration: none;
-  font-size: 16px;
-  margin: 10px 10px;
-  cursor: pointer;
-  font-weight: 700;
-  border-radius: 3px 3px 3px 3px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
 }
 .cards .card_detail {
   color: black;
@@ -260,7 +237,6 @@ a {
   text-rendering: auto;
   line-height: 1;
 }
-
 .heart > .far + .fas,
 .heart:hover > .far {
   display: none;
@@ -268,11 +244,25 @@ a {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 .heart:hover > .far + .fas {
   display: inherit;
 }
-
+.cards .btnnew {
+  border: none;
+  background-color: #99E2D0;
+  color: darkcyan;
+  padding: 7px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 10px 10px;
+  cursor: pointer;
+  font-weight: 700;
+  border-radius: 3px 3px 3px 3px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  visibility: visible;
+}
 footer {
   padding-bottom: 40px;
   background-color: black;
@@ -322,8 +312,7 @@ footer .contact {
   width: 100%;
   height: 700px;
   background-repeat: no-repeat;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   cursor: pointer;
   background-size: 100% 100%;
 }
@@ -651,18 +640,15 @@ h3 {
   text-align: center;
   font-size: 28px;
 }
-
 .order:hover {
   transition: 0.3s all ease-in-out;
   box-shadow: 0 7px 10px -6px grey;
   cursor: pointer;
   background-position: right top;
 }
-
 footer {
   padding-top: 40px;
 }
-
 .commercial_link, .commercial_linktwo,
 .information, .contact {
   padding-top: 20px;
@@ -752,30 +738,14 @@ footer {
 }
 @media (min-width: 1024px) and (max-width: 1429.98px) {
   /*page accueil*/
-  .fa-mobile-alt {
+  .fa-mobile-alt, .fa-list, .fa-store {
     padding-left: 15px;
     padding-right: 15px;
     font-size: 15px;
   }
-
-  .fa-list {
-    padding-left: 15px;
-    padding-right: 15px;
-    color: grey;
-    font-size: 15px;
-  }
-
-  .fa-store {
-    padding-left: 15px;
-    padding-right: 15px;
-    color: grey;
-    font-size: 15px;
-  }
-
   .number {
     font-size: 15px;
   }
-
   .fbtn {
     font-size: 15px;
     font-weight: 600;
@@ -786,17 +756,14 @@ footer {
     width: 100%;
     height: 590px;
   }
-
   .logoheader .logo {
     padding-top: 20px;
     padding-bottom: 20px;
   }
-
   .fa-arrow-left {
     font-size: 35px;
     padding: 40px 20px 20px 40px;
   }
-
   .heart {
     padding-right: 100px;
   }
@@ -806,48 +773,38 @@ footer {
   .logoheader .logo {
     font-size: 40px;
   }
-
   .location .fasgps {
     font-size: 25px;
   }
   .location a {
     font-size: 25px;
   }
-
   .reservation {
     font-size: 29px;
   }
-
   .selection {
     font-size: 23px;
   }
-
   .to_explore .btnexplor {
     width: 260px;
   }
-
   .steps {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-
   .cards {
     margin: 20px 20px;
   }
-
   .cards .card {
     height: 300px;
   }
-
   .card_detail p {
     font-size: 17px;
     margin-bottom: 5px;
   }
-
   .card_detail h2 {
     font-size: 1.2em;
   }
-
   .heart {
     font-size: 37px;
   }
@@ -856,16 +813,13 @@ footer {
   .logoheader .logo {
     padding-top: 20px;
   }
-
   .picture {
     height: 390px;
   }
-
   .presentation {
     font-size: 35px;
     padding-left: 20px;
   }
-
   .heart {
     font-size: 32px;
     padding-right: 20px;
@@ -876,36 +830,29 @@ footer {
   body {
     width: auto;
   }
-
   .logoheader .logo {
     font-size: 40px;
   }
-
   .fasgps {
     font-size: 21px;
   }
-
   .location a {
     font-size: 22px;
   }
-
   .reservation {
     font-size: 25px;
     text-align: center;
   }
-
   .selection {
     padding: 0 30px 5px 30px;
   }
   .selection P {
     font-size: 22px;
   }
-
   .btnexplor {
     font-size: 18px;
     padding: 15px 5px 15px 5px;
   }
-
   .functioning {
     font-size: 22px;
     margin-left: 15px;
@@ -913,7 +860,6 @@ footer {
     padding-top: 50px;
     padding-bottom: 20px;
   }
-
   .steps {
     flex-direction: column;
     display: flex;
@@ -924,24 +870,18 @@ footer {
     width: auto;
     padding-bottom: 10px;
   }
-  .steps .fa-list, .steps .fa-store, .steps .fa-mobile-alt {
+  .steps .fa-list, .steps .fa-store,
+  .steps .fa-mobile-alt {
     font-size: 18px;
   }
-
-  .fa-list:hover, .fa-store:hover, .fa-mobile-alt:hover {
-    color: #BA55D3;
-  }
-
   .fbtn {
     font-size: 16px;
     font-weight: 700;
   }
-
   .choicebtn, .compositionbtn, .tastingbtn {
     padding-top: 25px;
     padding-bottom: 25px;
   }
-
   .restaurants {
     margin-top: 30px;
   }
@@ -953,7 +893,6 @@ footer {
     padding-bottom: 0;
     padding-left: 35px;
   }
-
   .cards {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -976,14 +915,11 @@ footer {
     font-weight: 100;
     top: 10px;
     right: 10px;
+    visibility: visible;
   }
   .cards .card_detail {
-    color: black;
     display: flex;
     flex-direction: row;
-    background-color: white;
-    border-radius: 0 0 15px 15px;
-    box-shadow: 0 7px 10px -6px grey;
     margin-bottom: 15px;
     width: 100%;
     height: 32%;
@@ -1006,7 +942,6 @@ footer {
     padding-top: 20px;
     font-weight: lighter;
   }
-
   footer {
     padding-top: 23px;
     padding-bottom: 20px;
@@ -1014,25 +949,27 @@ footer {
   footer .logofooter .logoend {
     text-align: start;
     padding: 10px 0 10px 15px;
-    font-size: 16px;
+    font-size: 20px;
   }
-  footer .commercial_link, footer .commercial_linktwo,
-footer .information {
+  footer .commercial_link, 
+  footer .commercial_linktwo,
+  footer .information {
     text-align: start;
     padding: 10px 0 0 15px;
-    font-size: 15px;
+    font-size: 17px;
   }
   footer .contact {
     text-align: start;
-    font-size: 15px;
+    font-size: 17px;
     padding: 10px 0 50px 15px;
   }
   footer .fa-utensils {
-    padding-right: 12px;
+    padding-right: 14px;
   }
   footer .fa-handshake {
     padding-right: 7px;
     padding-bottom: 5px;
+    font-size: 14px;
   }
 
   /*Pages restaurants*/
@@ -1045,30 +982,23 @@ footer .information {
     font-size: 22px;
     padding-top: 23px;
   }
-
   .picture {
     height: 260px;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-
+   }
   .presentation {
     font-size: 22px;
     padding-left: 15px;
   }
-
   .heart {
     padding-top: 35px;
     text-align: left;
     padding-right: 60px;
     font-size: 30px;
   }
-
   h3 {
     font-size: 19px;
     font-weight: normal;
   }
-
   .food h4 {
     font-size: 19px;
     margin-top: 15px;
@@ -1076,16 +1006,15 @@ footer .information {
   .food p {
     font-size: 14px;
   }
-
   .meals .price {
     font-size: 15px;
     padding-top: 50px;
   }
-
   .to_explore .order {
     font-size: 18px;
     width: 200px;
     padding: 15px 20px;
   }
 }
+
 /*# sourceMappingURL=styles.css.map *//*# sourceMappingURL=styles.css.map */
