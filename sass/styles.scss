@@ -455,11 +455,12 @@
   .meals .price {
     padding-top: 70px;
     padding-right: 26px;
-    animation: run1b 1s 1;
-    -webkit-animation: ran1b 1s 1;
+    animation-name: coche;
+    animation: coche 1s 1;
+    -webkit-animation: coche 1s 1;
     font-size: 20px;
   }
-  @keyframes ran1b {
+  @keyframes coche {
   0% {
      transform: translate(-60px);
     }
@@ -467,15 +468,15 @@
       transform: translate(0px);
     }
   }
-
   .meals .price:hover{
     padding-top: 25px;
     padding-right: 26px;
     right:65px;
-    animation: run1 1s 1  forwards;
-    -webkit-animation: run1 1s 1 forwards;
+    animation-name: coches;
+    animation: coches 1s 1  forwards;
+    -webkit-animation: coches 1s 1 forwards;
     }
-  @keyframes run1 {
+  @keyframes coches {
     0% {
         transform: translate(65px);
     }
@@ -483,10 +484,9 @@
         transform: translate(0px);
     }
   }
-  
-  .btn_circle .fa-check
-  {
-    animation: runb 1s 1 ;
+  .btn_circle .fa-check {
+    animation-name: move;
+    animation: move 1s 1 ;
     color:white;
     width:15px;
     height:15px;
@@ -497,7 +497,7 @@
     left: 40%;
     right: 0px;
   }
-@keyframes runb {
+@keyframes move {
   0% {
       opacity: 1;
       transform: translate(-15px);
@@ -508,16 +508,15 @@
       transform: rotate(0deg);
   }
 }
-
 .btn_circle .fa-check:hover {
-  animation: run 1s 1 forwards;
-  -webkit-animation: run 1s 1 forwards;
+  animation-name: moving;
+  animation: moving 1s 1 forwards;
+  -webkit-animation: moving 1s 1 forwards;
   opacity: 1; 
   right: 15px;
   opacity: 100;
-  
 }  
-  @keyframes run {
+  @keyframes moving {
     0% {
         opacity: 0;
         transform: translate(0px);
@@ -529,9 +528,7 @@
         transform: rotate(360deg);
     }
   }
-   
-.meals .btn_circle
-{
+.meals .btn_circle {
   height: 100%;
   position: absolute;
   background-color: #96DED1;
@@ -540,10 +537,11 @@
   right: 0;
   float: right;
   border-radius: 0px 15px 15px 0px;
-  animation: widthgrowb 1s 1 ;
-  -webkit-animation: widthgrowb 1s 1;
+  animation-name: all;
+  animation: all 1s 1 ;
+  -webkit-animation: all 1s 1;
 }
-@-webkit-keyframes widthgrowb {
+@-webkit-keyframes all {
   0% {
       width: 0px;
     }
@@ -551,7 +549,7 @@
       width: 65px;
     }
   }
-  @keyframes widthgrowb {
+  @keyframes all {
 
     0% {
         width: 65px;
@@ -560,14 +558,14 @@
         width: 0px;
       }
 }
-
 .meals .btn_circle:hover {
   height: 100%;
   border-radius: 0px 15px 15px 0px;
-  animation: widthgrow 1s 1 ease forwards;
-  -webkit-animation: widthgrow 1s ease 1 forwards;
+  animation-name: allh;
+  animation: allh 1s 1 ease forwards;
+  -webkit-animation: allh 1s ease 1 forwards;
 }
-@-webkit-keyframes widthgrow {
+@-webkit-keyframes allh {
   0% {
     width: 0;
   }
@@ -575,7 +573,7 @@
     width: 65px;
   }
 }
-@keyframes widthgrow {
+@keyframes allh {
 
   0% {
       padding-bottom: 5px;
@@ -586,7 +584,7 @@
       width: 65px;
     }
 }
-@-webkit-keyframes widthgrow {
+@-webkit-keyframes allh {
   0% {
     width: 0;
   }
