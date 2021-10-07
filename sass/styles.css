@@ -210,7 +210,7 @@ a {
   height: 70%;
 }
 .cards .card:hover {
-  transform: scale(1);
+  transform: scale(1.1);
 }
 .cards .card_detail {
   color: black;
@@ -219,7 +219,7 @@ a {
   background-color: white;
   border-radius: 0 0 15px 15px;
   box-shadow: 0 7px 10px -6px grey;
-  box-shadow: 0 7px 10px -6px grey;
+  -webkit-box-shadow: 0 7px 10px -6px grey;
   width: 100%;
 }
 .cards .card_name {
@@ -260,7 +260,7 @@ a {
   display: inherit;
 }
 
-.cards .btnnew {
+.btnnew {
   border: none;
   background-color: #99E2D0;
   color: darkcyan;
@@ -509,146 +509,6 @@ h3 {
   }
   100% {
     transform: translate(0px);
-  }
-}
-.btn_circle .fa-check {
-  -webkit-animation-name: move;
-          animation-name: move;
-  -webkit-animation: move 1s 1;
-          animation: move 1s 1;
-  color: white;
-  width: 15px;
-  height: 15px;
-  opacity: 0;
-  margin: 0;
-  position: absolute;
-  top: 40%;
-  left: 40%;
-  right: 0px;
-}
-
-@-webkit-keyframes move {
-  0% {
-    opacity: 1;
-    transform: translate(-15px);
-    transform: rotate(360deg);
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(0deg);
-  }
-}
-
-@keyframes move {
-  0% {
-    opacity: 1;
-    transform: translate(-15px);
-    transform: rotate(360deg);
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(0deg);
-  }
-}
-.btn_circle .fa-check:hover {
-  -webkit-animation-name: moving;
-          animation-name: moving;
-  animation: moving 1s 1 forwards;
-  -webkit-animation: moving 1s 1 forwards;
-  opacity: 1;
-  right: 15px;
-  opacity: 100;
-}
-
-@-webkit-keyframes moving {
-  0% {
-    opacity: 0;
-    transform: translate(0px);
-    transform: rotate(0deg);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-15px);
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes moving {
-  0% {
-    opacity: 0;
-    transform: translate(0px);
-    transform: rotate(0deg);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-15px);
-    transform: rotate(360deg);
-  }
-}
-.meals .btn_circle {
-  height: 100%;
-  position: absolute;
-  background-color: #96DED1;
-  width: 0px;
-  padding-bottom: 0px;
-  right: 0;
-  float: right;
-  border-radius: 0px 15px 15px 0px;
-  -webkit-animation-name: all;
-          animation-name: all;
-  animation: all 1s 1;
-  -webkit-animation: all 1s 1;
-}
-
-@-webkit-keyframes all {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 65px;
-  }
-}
-@keyframes all {
-  0% {
-    width: 65px;
-  }
-  100% {
-    width: 0px;
-  }
-}
-.meals .btn_circle:hover {
-  height: 100%;
-  border-radius: 0px 15px 15px 0px;
-  -webkit-animation-name: allh;
-          animation-name: allh;
-  animation: allh 1s 1 ease forwards;
-  -webkit-animation: allh 1s ease 1 forwards;
-}
-
-@-webkit-keyframes allh {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 65px;
-  }
-}
-@keyframes allh {
-  0% {
-    padding-bottom: 5px;
-    width: 0px;
-  }
-  100% {
-    padding-bottom: 5px;
-    width: 65px;
-  }
-}
-@-webkit-keyframes allh {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 65px;
   }
 }
 .order {
@@ -982,16 +842,6 @@ footer {
   .cards .card img {
     height: 68%;
   }
-  .cards .btnnew {
-    padding: 7px 15px;
-    position: absolute;
-    font-size: 14px;
-    margin: 10px 10px;
-    cursor: pointer;
-    font-weight: 100;
-    top: 10px;
-    right: 10px;
-  }
   .cards .card_detail {
     color: black;
     display: flex;
@@ -1020,6 +870,17 @@ footer {
     font-size: 25px;
     padding-top: 20px;
     font-weight: lighter;
+  }
+
+  .btnnew {
+    padding: 7px 15px;
+    position: absolute;
+    font-size: 14px;
+    margin: 10px 10px;
+    cursor: pointer;
+    font-weight: 100;
+    top: 10px;
+    right: 10px;
   }
 
   footer {

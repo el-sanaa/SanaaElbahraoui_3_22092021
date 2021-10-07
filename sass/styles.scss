@@ -199,8 +199,8 @@
         height: 70%;
         }    
       .card:hover{
-        -webkit-transform: scale(1);
-        transform: scale(1);
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
         }
       
       .card_detail {
@@ -216,7 +216,6 @@
         border-radius: 0 0 15px 15px;
         box-shadow: 0 7px 10px -6px grey;
         -webkit-box-shadow: 0 7px 10px -6px grey;
-        box-shadow: 0 7px 10px -6px grey;
         width: 100%;
       }
       .card_name {
@@ -255,7 +254,7 @@
   .heart:hover > .far + .fas {
     display: inherit;
   }
-  .cards .btnnew {
+  .btnnew {
     border: none;
     background-color: #99E2D0;
     color: darkcyan;
@@ -484,136 +483,28 @@
         transform: translate(0px);
     }
   }
-  .btn_circle .fa-check {
-    animation-name: move;
-    animation: move 1s 1 ;
-    color:white;
-    width:15px;
-    height:15px;
-    opacity: 0;
-    margin: 0;
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    right: 0px;
-  }
-@keyframes move {
-  0% {
-      opacity: 1;
-      transform: translate(-15px);
-      transform: rotate(360deg);
-  }
-  100% {
-      opacity: 0;
-      transform: rotate(0deg);
-  }
-}
-.btn_circle .fa-check:hover {
-  animation-name: moving;
-  animation: moving 1s 1 forwards;
-  -webkit-animation: moving 1s 1 forwards;
-  opacity: 1; 
-  right: 15px;
-  opacity: 100;
-}  
-  @keyframes moving {
-    0% {
-        opacity: 0;
-        transform: translate(0px);
-        transform: rotate(0deg);
+  
+  .order{
+    background: linear-gradient(337deg, #ec5cbd 31%, #DA70D6 88%);
+    padding: 20px 30px 20px 30px;
+    border-radius: 50px 50px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    box-shadow: 0 7px 10px -6px grey;
+    width: 320px;
+    margin-top: 60px;
+    background-size: 450%;
+    transition: 0.3s all ease-in-out;
+    text-align: center;
+    font-size: 28px;
     }
-    100% {
-        opacity: 1;
-        transform: translate(-15px);
-        transform: rotate(360deg);
+  .order:hover{
+    transition: 0.3s all ease-in-out;
+    box-shadow: 0 7px 10px -6px grey;
+    cursor: pointer;
+    background-position: right top;
     }
-  }
-.meals .btn_circle {
-  height: 100%;
-  position: absolute;
-  background-color: #96DED1;
-  width: 0px;
-  padding-bottom: 0px;
-  right: 0;
-  float: right;
-  border-radius: 0px 15px 15px 0px;
-  animation-name: all;
-  animation: all 1s 1 ;
-  -webkit-animation: all 1s 1;
-}
-@-webkit-keyframes all {
-  0% {
-      width: 0px;
-    }
-    100% {
-      width: 65px;
-    }
-  }
-  @keyframes all {
-
-    0% {
-        width: 65px;
-      }
-      100% {
-        width: 0px;
-      }
-}
-.meals .btn_circle:hover {
-  height: 100%;
-  border-radius: 0px 15px 15px 0px;
-  animation-name: allh;
-  animation: allh 1s 1 ease forwards;
-  -webkit-animation: allh 1s ease 1 forwards;
-}
-@-webkit-keyframes allh {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 65px;
-  }
-}
-@keyframes allh {
-
-  0% {
-      padding-bottom: 5px;
-      width: 0px;
-    }
-    100% {
-      padding-bottom: 5px;
-      width: 65px;
-    }
-}
-@-webkit-keyframes allh {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 65px;
-  }
-}
-.order{
-  background: linear-gradient(337deg, #ec5cbd 31%, #DA70D6 88%);
-  padding: 20px 30px 20px 30px;
-  border-radius: 50px 50px;
-  border: none;
-  color: white;
-  font-weight: 700;
-  box-shadow: 0 7px 10px -6px grey;
-  width: 320px;
-  margin-top: 60px;
-  background-size: 450%;
-  transition: 0.3s all ease-in-out;
-  text-align: center;
-  font-size: 28px;
-}
-.order:hover{
-  transition: 0.3s all ease-in-out;
-  box-shadow: 0 7px 10px -6px grey;
-  cursor: pointer;
-  background-position: right top;
-}
-
   footer{
     padding-top: 40px;
   }
@@ -622,21 +513,21 @@
     padding-top: 20px;
   }
   .loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    z-index: 10;
-    margin-top: -15px;
-    background-color: #eaeaeaf6;
-    animation-name: spin;
-    animation-duration: 1.5s;
-    animation-timing-function: linear;
-    animation-delay: 3s;
-    animation-fill-mode: forwards;
-  }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      height: 100%;
+      width: 100%;
+      z-index: 10;
+      margin-top: -15px;
+      background-color: #eaeaeaf6;
+      animation-name: spin;
+      animation-duration: 1.5s;
+      animation-timing-function: linear;
+      animation-delay: 3s;
+      animation-fill-mode: forwards;
+    }
 
   @keyframes spin {
     0% {
@@ -654,7 +545,6 @@
     border-radius: 50%;
     animation: rotate 1.5s infinite;
   }
-
   .secondary-circle {
     animation: rotate 1.5s infinite 0.1s;
     width: 120px;
@@ -855,7 +745,7 @@
     font-size: 16px;
     font-weight: 700;
     }
-    .choicebtn, .compositionbtn, .tastingbtn{
+  .choicebtn, .compositionbtn, .tastingbtn{
       padding-top: 25px;
       padding-bottom: 25px; 
     }
@@ -868,8 +758,8 @@
         padding-top: 55px;
         padding-bottom: 0;
         padding-left: 35px;
-      }
-    }  
+     }
+  }  
   .cards {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -883,16 +773,6 @@
       .card img{
         height: 68%;
       }
-      .btnnew {
-        padding: 7px 15px;
-        position: absolute;
-        font-size: 14px;
-        margin: 10px 10px;
-        cursor: pointer;
-        font-weight: 100;
-        top: 10px;
-        right: 10px;
-      }
       .card_detail {
         color: black;
         display: flex;
@@ -904,7 +784,7 @@
         width: 100%;
         height: 32%;
       }
-        .card_name {
+      .card_name {
           width: 80%;
           padding-top: 0;
           padding-bottom: 15px;
@@ -916,13 +796,23 @@
             p{
               font-size: 19px;
             }
-        }
-        .heart {
+      }
+      .heart {
           font-size: 25px;
           padding-top: 20px;
           font-weight: lighter;
         }
-    }    
+    } 
+  .btnnew {
+      padding: 7px 15px;
+      position: absolute;
+      font-size: 14px;
+      margin: 10px 10px;
+      cursor: pointer;
+      font-weight: 100;
+      top: 10px;
+      right: 10px;
+    }     
   footer{
     padding-top: 23px;
     padding-bottom: 20px;
