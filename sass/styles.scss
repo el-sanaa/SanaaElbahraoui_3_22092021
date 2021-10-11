@@ -268,8 +268,7 @@
     position: absolute;
     top: 10px;
     right: 10px;
-    
-  }
+    }
   footer{
     padding-bottom: 40px;
     background-color: black;
@@ -401,7 +400,7 @@
     animation: fadein 5s;
       -moz-animation: fadein 5s; /* Firefox */
       -webkit-animation: fadein 5s; /* Safari et Chrome */
-      -o-animation: fadein 5s; /* Opera */
+     
   }
   @keyframes fadein {
     from {
@@ -427,22 +426,14 @@
         opacity:1;
     }
   }
-  @-o-keyframes fadein { /* sur Opera */
-    from {
-        opacity:0;
-    }
-    to {
-        opacity: 1;
-    }
-  }
-    
   .food h4{
     font-weight: 700;
     font-size: 25px;
     margin-bottom: 10px;
     padding-left: 10px;
     overflow: hidden;
-    text-overflow: ellipsis;  
+    text-overflow: ellipsis;
+    white-space: nowrap;  
   }
   .food p{
     font-size: 20px;
@@ -450,6 +441,7 @@
     padding-bottom: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
+    white-space: nowrap;
   }
   .meals .price {
     padding-top: 70px;
@@ -483,7 +475,50 @@
         transform: translate(0px);
     }
   }
-  
+  .meals .btn_circle {
+    position: absolute;
+    background-color: #99E2D0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 65px;
+    border-radius: 0px 20px 20px 0px;
+    overflow: hidden;
+    transition: rotate 0.5s;
+   
+    cursor: pointer;
+  }  
+        
+  .meals .btn_circle:hover {
+    animation: rotate 0.5s;
+    transform: rotate(360deg) translateX(65px);
+    -webkit-animation: rotate 0.5s;
+  }
+    
+  @keyframes rotate {
+    0%{
+      transform: rotate(0) translateX(0px);
+    }
+    100%{
+      transform: rotate(360deg) translateX(65px);
+    }
+  }
+  .btn_circle .fa-check-circle {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 900;
+    opacity: 1;
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    animation: rotate 0.5s;
+    
+  }
+
+  .btn_circle .fa-check-circle:hover{
+    transform: rotate(360deg) translateX(65px);
+  }
+
   .order{
     background: linear-gradient(337deg, #ec5cbd 31%, #DA70D6 88%);
     padding: 20px 30px 20px 30px;
