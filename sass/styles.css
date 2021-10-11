@@ -519,17 +519,18 @@ h3 {
   right: 0;
   width: 65px;
   border-radius: 0px 20px 20px 0px;
-  transform: translateX(65px);
   overflow: hidden;
-  transition-duration: 0.5s;
+  transition: rotate 0.5s;
   cursor: pointer;
 }
 
 .meals .btn_circle:hover {
-  transform: translatex(0px);
+  animation: rotate 0.5s;
+  transform: rotate(360deg) translateX(65px);
+  -webkit-animation: rotate 0.5s;
 }
 
-@-webkit-keyframes rotation {
+@-webkit-keyframes rotate {
   0% {
     transform: rotate(0) translateX(0px);
   }
@@ -538,7 +539,7 @@ h3 {
   }
 }
 
-@keyframes rotation {
+@keyframes rotate {
   0% {
     transform: rotate(0) translateX(0px);
   }
@@ -554,12 +555,12 @@ h3 {
   position: absolute;
   left: 20px;
   top: 25px;
-  transform: rotate(360deg);
-  transition-duration: 0.5s;
+  -webkit-animation: rotate 0.5s;
+          animation: rotate 0.5s;
 }
 
 .btn_circle .fa-check-circle:hover {
-  transform: rotate(0deg);
+  transform: rotate(360deg) translateX(65px);
 }
 
 .order {
@@ -663,12 +664,6 @@ footer {
   border-top: 4px solid transparent;
   border-radius: 50%;
   position: absolute;
-}
-
-@-webkit-keyframes rotate {
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes rotate {
