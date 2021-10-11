@@ -475,6 +475,29 @@
         transform: translate(0px);
     }
   }
+ 
+  .meals .food:hover {
+    animation: move 1s forwards;
+    -webkit-animation: move 1s 1 forwards;
+  }
+  @keyframes move {
+    0% {
+      width: 300px;
+    }
+    100% {
+      width: 225px;
+    }
+  }
+  @-webkit-keyframes move {
+    0% {
+      width: 300px;
+    }
+    100% {
+      width: 225px;
+    }
+  }
+
+
   .meals .btn_circle {
     position: absolute;
     right: 10px;
@@ -482,16 +505,26 @@
     font-size: 25px;
     color: white;
     border-radius: 0 15px 15px 0;
-    padding-bottom: 0px !important;
+    
     height: 74.2px;
+    
   }  
   .btn_circle .fa-check-circle {
     color: #fff;
     font-size: 25px;
-    padding-top: 20px;
+    color: white;
+    width: 15px;
+    height: 15px;
+    padding-top: 25px;
+    -webkit-transition: all 5s 1;
+    transition: all 5s 1;
+    
+    
     
   }      
  
+  
+   
 
   .order{
     background: linear-gradient(337deg, #ec5cbd 31%, #DA70D6 88%);
