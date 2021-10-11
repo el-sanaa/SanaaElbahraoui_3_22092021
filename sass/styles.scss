@@ -477,14 +477,18 @@
   }
   .meals .btn_circle {
     position: absolute;
+    right: 10px;
     background-color: #99E2D0;
     font-size: 25px;
     color: white;
-    
+    border-radius: 0 15px 15px 0;
+    padding-bottom: 0px !important;
+    height: 74.2px;
   }  
   .btn_circle .fa-check-circle {
     color: #fff;
-    font-size: 18px;
+    font-size: 25px;
+    padding-top: 20px;
     
   }      
  
