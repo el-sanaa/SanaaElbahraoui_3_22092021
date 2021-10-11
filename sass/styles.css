@@ -419,8 +419,6 @@ h3 {
   /* Firefox */
   -webkit-animation: fadein 5s;
   /* Safari et Chrome */
-  -o-animation: fadein 5s;
-  /* Opera */
 }
 
 @keyframes fadein {
@@ -447,6 +445,7 @@ h3 {
   padding-left: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .food p {
@@ -455,6 +454,7 @@ h3 {
   padding-bottom: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .meals .price {
@@ -511,6 +511,57 @@ h3 {
     transform: translate(0px);
   }
 }
+.meals .btn_circle {
+  position: absolute;
+  background-color: #99E2D0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 65px;
+  border-radius: 0px 20px 20px 0px;
+  transform: translateX(65px);
+  overflow: hidden;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.meals .btn_circle:hover {
+  transform: translatex(0px);
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    transform: rotate(0) translateX(0px);
+  }
+  100% {
+    transform: rotate(360deg) translateX(65px);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0) translateX(0px);
+  }
+  100% {
+    transform: rotate(360deg) translateX(65px);
+  }
+}
+.btn_circle .fa-check-circle {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 900;
+  opacity: 1;
+  position: absolute;
+  left: 20px;
+  top: 25px;
+  transform: rotate(360deg);
+  transition-duration: 0.5s;
+}
+
+.btn_circle .fa-check-circle:hover {
+  transform: rotate(0deg);
+}
+
 .order {
   background: linear-gradient(337deg, #ec5cbd 31%, #DA70D6 88%);
   padding: 20px 30px 20px 30px;
