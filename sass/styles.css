@@ -511,6 +511,17 @@ h3 {
     transform: translate(0px);
   }
 }
+.meals .btn_circle {
+  position: absolute;
+  background-color: #99E2D0;
+  font-size: 25px;
+  color: white;
+}
+
+.btn_circle .fa-check-circle {
+  color: #fff;
+  font-size: 18px;
+}
 
 .order {
   background: linear-gradient(337deg, #ec5cbd 31%, #DA70D6 88%);
@@ -613,6 +624,12 @@ footer {
   border-top: 4px solid transparent;
   border-radius: 50%;
   position: absolute;
+}
+
+@-webkit-keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 @keyframes rotate {

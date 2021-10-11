@@ -476,81 +476,18 @@
     }
   }
   .meals .btn_circle {
-    height:100%;
     position: absolute;
-    background-color: #96DED1;
-    width:0px;
-    padding-bottom: 0px;
-    right: 0;
-    float: right;
-    border-radius: 0px 15px 15px 0px;
-   }  
-        
-  .meals .btn_circle:hover {
-
-    animation: rotate 0.5s;
-    transform: rotate 1s forwards;
-    -webkit-animation: rotate 1s forwards;
-    height: 100%;
-    padding-bottom: 0px;
-  }
-  @-webkit-keyframes rotate {
-    0% {
-        padding-bottom: 0px !important;
-      width: 0;
-    }
-    100% {
-        padding-bottom: 0px !important;
-      width: 65px;
-    }
-  } 
-  @keyframes rotate {
-
-    0% {
-        padding-bottom: 0px !important;
-        width: 0px;
-      }
-      100% {
-        padding-bottom: 0px !important;
-        width: 65px;
-      }
-}
-
-  
+    background-color: #99E2D0;
+    font-size: 25px;
+    color: white;
+    
+  }  
   .btn_circle .fa-check-circle {
-    color:white;
-      width:15px;
-      height:15px;
-      opacity: 0;
-      transition: all 5s 1;
-      margin: 0;
-      position: absolute;
-      top: 40%;
-      left: 40%;
-      right: 0px;
-     
-  }
-
-  .btn_circle .fa-check-circle:hover{
-    animation: run 1s forwards;
-    opacity: 1;
-    transform: rotate(360deg);
-    right: 15px;
-    opacity: 100;
-  }
-  @keyframes run {
-    0% {
-        opacity: 0;
-        transform: translate(0px);
-        transform: rotate(0deg);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(-15px);
-        transform: rotate(360deg);
-    }
-}
-
+    color: #fff;
+    font-size: 18px;
+    
+  }      
+ 
 
   .order{
     background: linear-gradient(337deg, #ec5cbd 31%, #DA70D6 88%);
