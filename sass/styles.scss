@@ -715,7 +715,7 @@
   .primary-circle {
     width: 150px;
     height: 150px;
-    border: 4px solid #DDA0DD;
+    border: 5px solid #DDA0DD;
     border-top: 4px solid transparent;
     border-radius: 50%;
     animation: rotate 1.5s infinite;
@@ -724,7 +724,7 @@
     animation: rotate 1.5s infinite 0.1s;
     width: 120px;
     height: 120px;
-    border: 4px solid #DA70D6;
+    border: 3px solid #DA70D6;
     border-top: 4px solid transparent;
     border-radius: 50%;
     position: absolute;
@@ -747,6 +747,14 @@
       transform: rotate(360deg);
     }
 
+  }
+  @-webkit-keyframes rotate {
+    from {
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
   }
 
 
