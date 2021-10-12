@@ -527,20 +527,36 @@
     
     
     background-color: #99E2D0;
-    font-size: 25px;
+    font-size: 40px;
     color: white;
     border-radius: 0 15px 15px 0;
-    
-    height: 74.2px;
+    position: relative;
+    height: auto;
     -webkit-animation: moving 1s 1;
     animation: moving 1s 1;
     
   } 
-
+  @-webkit-keyframes moving {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 65px;
+    }
+  }
+  @keyframes moving {
+    0% {
+      width: 65px;
+    }
+    100% {
+      width: 0px;
+    }
+  }
   .meals .btn_circle:hover{
     border-radius: 0px 15px 15px 0px;
-    -webkit-animation: movingh 1s ease 1 forwards;
-    animation: movingh 1s 1 ease forwards;
+    -webkit-animation: movingh 1s  1 forwards;
+    animation: movingh 1s 1  forwards;
+    width: 65px;
    
   }
   @-webkit-keyframes movingh {
@@ -552,82 +568,97 @@
     }
   }
   @keyframes movingh {
-
     0% {
-        padding-bottom: 5px !important;
-        width: 0px;
-      }
-      100% {
-        padding-bottom: 5px !important;
-        width: 65px;
-      }
-}
-
-  @keyframes moving {
-
-    0% {
-        width: 65px;
-      }
-      100% {
-        width: 0px;
-      }
-}
-@-webkit-keyframes moving {
-  0% {
+      padding-bottom: 5px !important;
       width: 0px;
     }
     100% {
+      padding-bottom: 5px !important;
       width: 65px;
     }
   }
-
+  
   .btn_circle .fa-check-circle {
     color: #fff;
     font-size: 25px;
     color: white;
-    
+    opacity: 0;
+    position: absolute;
     padding-top: 25px;
     -webkit-transition: all 5s 1;
     transition: all 5s 1;
     animation: rotates 1s 1;
-   
+    
+  }
+  @-webkit-keyframes rotates {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate(-15px);
+              transform: translate(-15px);
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+  }
+  @keyframes rotates {
+    0% {
+      opacity: 1;
+      -webkit-transform: translate(-15px);
+              transform: translate(-15px);
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+    100% {
+      opacity: 0;
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
   }
   .btn_circle .fa-check-circle:hover{
     opacity: 1;
     right: 15px;
     opacity: 100;
     animation: rotatesh 1s 1 forwards;
+     -webkit-animation: rotatesh 1s 1 forwards;
   }
-  @keyframes run {
+  @-webkit-keyframes rotatesh {
     0% {
-        opacity: 0;
-        transform: translate(0px);
-        transform: rotate(0deg);
+      opacity: 0;
+      -webkit-transform: translate(0px);
+              transform: translate(0px);
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
     }
     100% {
-        opacity: 1;
-        transform: translate(-15px);
-        transform: rotate(360deg);
+      opacity: 1;
+      -webkit-transform: translate(-15px);
+              transform: translate(-15px);
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
     }
   }
-
-  @keyframes rotates {
-    0% {
-        opacity: 1;
-        transform: translate(-15px);
-        transform: rotate(360deg);
-    }
-    100% {
-        opacity: 0;
-        transform: rotate(0deg);
-    }
-}
-
-      
- 
   
-   
-
+  @keyframes rotatesh {
+    0% {
+      opacity: 0;
+      -webkit-transform: translate(0px);
+              transform: translate(0px);
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translate(-15px);
+              transform: translate(-15px);
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+        
   .order{
     background: linear-gradient(337deg, #ec5cbd 31%, #DA70D6 88%);
     padding: 20px 30px 20px 30px;
@@ -719,7 +750,7 @@
   }
 
 
-@media (min-width: 1024px) and (max-width: 1429.98px){
+@media (min-width: 1024px) and (max-width: 1529.98px){
  
   /*page accueil*/
   .fa-mobile-alt {
@@ -765,7 +796,12 @@
   .heart{
     padding-right: 100px;
   }
+  .btn_circle .fa-check-circle {
+    font-size: 35px;
+    padding-top: 30px;
+    }
 }
+
 
 
 @media (min-width: 650px) and (max-width: 1023.98px){
@@ -829,8 +865,11 @@
     font-size: 32px;
     padding-right: 20px;
     }
+    .btn_circle .fa-check-circle {
+     font-size: 35px;
+     padding-top: 30px;  
   }  
-
+}
 
 @media (min-width: 375px) and (max-width: 648.98px){
   /*page accueil*/
@@ -1030,7 +1069,10 @@
   .meals .price{
     font-size: 15px;
     padding-top: 50px;
-  }  
+  }
+  .btn_circle .fa-check-circle {
+    font-size: 25px;  
+    }
   .to_explore{
     .order{
       font-size: 18px;
@@ -1038,5 +1080,6 @@
       padding: 15px 20px;
     }
   } 
+
 }
 /*# sourceMappingURL=main.css.map */
