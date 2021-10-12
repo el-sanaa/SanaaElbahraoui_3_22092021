@@ -393,6 +393,7 @@
     background-color: white;
     cursor: pointer;
     transition: all 0.5s;
+    -webkit-transition: all 0.5s;
     box-shadow: 0 7px 10px -6px grey;
     -webkit-box-shadow:0 7px 10px -6px grey;
     margin: 5px 20px 20px 20px;
@@ -475,53 +476,154 @@
         transform: translate(0px);
     }
   }
- 
-  .meals .food:hover {
-    animation: move 1s forwards;
-    -webkit-animation: move 1s 1 forwards;
+  .meals .food{
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    width: 300px;
+    animation: move 1s 1;
+    -webkit-animation: move 1s 1;
+    
   }
-  @keyframes move {
+  .meals .food:hover {
+    animation: moveh 1s 1 forwards;
+    -webkit-animation: moveh 1s 1 forwards;
+  }
+
+  @keyframes moveh {
     0% {
       width: 300px;
     }
     100% {
       width: 225px;
+    }
+  }
+  @-webkit-keyframes moveh {
+    0% {
+      width: 300px;
+    }
+    100% {
+      width: 225px;
+    }
+  }
+  @keyframes move {
+    0% {
+      width: 285px;
+    }
+    100% {
+      width: 325px;
     }
   }
   @-webkit-keyframes move {
     0% {
-      width: 300px;
+      width: 225px;
     }
     100% {
-      width: 225px;
+      width: 300px;
     }
   }
 
 
   .meals .btn_circle {
-    position: absolute;
-    right: 10px;
+    
+    
     background-color: #99E2D0;
     font-size: 25px;
     color: white;
     border-radius: 0 15px 15px 0;
     
     height: 74.2px;
+    -webkit-animation: moving 1s 1;
+    animation: moving 1s 1;
     
-  }  
+  } 
+
+  .meals .btn_circle:hover{
+    border-radius: 0px 15px 15px 0px;
+    -webkit-animation: movingh 1s ease 1 forwards;
+    animation: movingh 1s 1 ease forwards;
+   
+  }
+  @-webkit-keyframes movingh {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 65px;
+    }
+  }
+  @keyframes movingh {
+
+    0% {
+        padding-bottom: 5px !important;
+        width: 0px;
+      }
+      100% {
+        padding-bottom: 5px !important;
+        width: 65px;
+      }
+}
+
+  @keyframes moving {
+
+    0% {
+        width: 65px;
+      }
+      100% {
+        width: 0px;
+      }
+}
+@-webkit-keyframes moving {
+  0% {
+      width: 0px;
+    }
+    100% {
+      width: 65px;
+    }
+  }
+
   .btn_circle .fa-check-circle {
     color: #fff;
     font-size: 25px;
     color: white;
-    width: 15px;
-    height: 15px;
+    
     padding-top: 25px;
     -webkit-transition: all 5s 1;
     transition: all 5s 1;
-    
-    
-    
-  }      
+    animation: rotates 1s 1;
+   
+  }
+  .btn_circle .fa-check-circle:hover{
+    opacity: 1;
+    right: 15px;
+    opacity: 100;
+    animation: rotatesh 1s 1 forwards;
+  }
+  @keyframes run {
+    0% {
+        opacity: 0;
+        transform: translate(0px);
+        transform: rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-15px);
+        transform: rotate(360deg);
+    }
+  }
+
+  @keyframes rotates {
+    0% {
+        opacity: 1;
+        transform: translate(-15px);
+        transform: rotate(360deg);
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(0deg);
+    }
+}
+
+      
  
   
    
