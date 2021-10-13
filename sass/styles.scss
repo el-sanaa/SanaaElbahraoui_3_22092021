@@ -1,7 +1,7 @@
 @import './variables.scss';
 
 
-
+ /*page accueil*/
   body {
     margin: auto;
     width: 100%;
@@ -193,6 +193,7 @@
       text-decoration: none;
       margin: 20px 20px;
       width: auto;
+      position: relative;
       }
       .card img{
         width: 100%;
@@ -202,7 +203,7 @@
         -webkit-transform: scale(1.1);
         transform: scale(1.1);
         }
-      
+     
       .card_detail {
         color: black;
         display: -webkit-box;
@@ -236,6 +237,7 @@
         font-size: 30px;
         padding-top: 15px;
         font-weight: 400;
+        padding-right: 0;
         text-align: center;
         display: inline-block;
         font-style: normal;
@@ -315,6 +317,7 @@
       }
   }    
 
+
 /*pages restaurants*/
   .picture{
     width: 100%;
@@ -324,10 +327,7 @@
     cursor: pointer;
     background-size: 100% 100%;
   }
-  .picture:hover{
-    transform: scale(1);
-    -webkit-transform: scale(1);
-  }
+  
   .fa-arrow-left {
     float: left;
     padding-top: 40px;
@@ -854,6 +854,7 @@
   }
   .heart{
     font-size: 37px;
+    padding-right: 0;
   }
 
 /*pages restaurants*/
@@ -992,6 +993,7 @@
           font-size: 25px;
           padding-top: 20px;
           font-weight: lighter;
+          padding-right: 0;
         }
     } 
   .btnnew {
@@ -1003,7 +1005,8 @@
       font-weight: 100;
       top: 10px;
       right: 10px;
-    }     
+    } 
+        
   footer{
     padding-top: 23px;
     padding-bottom: 20px;
