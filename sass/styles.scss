@@ -373,7 +373,7 @@
     padding-bottom: 0;
     padding-left: 15px;
     padding-top: 20px;
-    margin-left: 10px;
+    margin-left: 20px;
     margin-right: 10px;
   }
   h3{
@@ -427,23 +427,32 @@
         opacity:1;
     }
   }
-  .food h4{
-    font-weight: 700;
-    font-size: 25px;
-    margin-bottom: 10px;
-    padding-left: 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;  
-  }
-  .food p{
-    font-size: 20px;
-    padding-left: 10px;
-    padding-bottom: 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+ 
+  .meals .food{
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    width: 95%;
+    animation: move 1s 1;
+    -webkit-animation: move 1s 1;
+    
+        h4{
+          font-weight: 700;
+          font-size: 25px;
+          margin-bottom: 10px;
+          padding-left: 20px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;  
+        }
+        p{
+          font-size: 20px;
+          padding-left: 20px;
+          padding-bottom: 10px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }  
   .meals .price {
     padding-top: 70px;
     padding-right: 26px;
@@ -476,14 +485,7 @@
         transform: translate(0px);
     }
   }
-  .meals .food{
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    width: 300px;
-    animation: move 1s 1;
-    -webkit-animation: move 1s 1;
-    
-  }
+ 
   .meals .food:hover {
     animation: moveh 1s 1 forwards;
     -webkit-animation: moveh 1s 1 forwards;
@@ -522,10 +524,7 @@
     }
   }
 
-
   .meals .btn_circle {
-    
-    
     background-color: #99E2D0;
     font-size: 40px;
     color: white;
@@ -534,8 +533,7 @@
     height: auto;
     -webkit-animation: moving 1s 1;
     animation: moving 1s 1;
-    
-  } 
+    } 
   @-webkit-keyframes moving {
     0% {
       width: 0;
@@ -556,7 +554,7 @@
     border-radius: 0px 15px 15px 0px;
     -webkit-animation: movingh 1s  1 forwards;
     animation: movingh 1s 1  forwards;
-    width: 65px;
+    width: 85px;
    
   }
   @-webkit-keyframes movingh {
@@ -1064,26 +1062,243 @@
      font-size: 30px;
     }
    h3{
-     font-size: 19px;
+     display: inline-block;
+     font-size: 18px;
      font-weight: normal;
    }
-   .food{
-        h4{
-        font-size: 19px;
-        margin-top: 15px;
-        
-      }
-      p{
-        font-size: 14px;
-      }
-  } 
-  .meals .price{
-    font-size: 15px;
-    padding-top: 50px;
+   .meals{
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px 15px;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    box-shadow: 0 7px 10px -6px grey;
+    -webkit-box-shadow:0 7px 10px -6px grey;
+    margin: 5px 20px 20px 20px;
+    justify-content: space-between;
+    animation: fadein 5s;
+      -moz-animation: fadein 5s; /* Firefox */
+      -webkit-animation: fadein 5s; /* Safari et Chrome */
+     
   }
-  .btn_circle .fa-check-circle {
-    font-size: 25px;  
+  @keyframes fadein {
+    from {
+        opacity:0;
     }
+    to {
+        opacity:1;
+    }
+  }
+  @-moz-keyframes fadein { /* sur Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+  }
+  @-webkit-keyframes fadein { /* sur Safari et Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+  }
+ 
+
+   .meals .food{
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    width: 95%;
+    animation: move 1s 1;
+    -webkit-animation: move 1s 1;
+        h4{
+          font-weight: 700;
+          font-size: 18px;
+          margin-bottom: 10px;
+          padding-left: 10px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; 
+          
+        }
+        p{
+          font-size: 15px;
+          padding-left: 10px;
+          padding-bottom: 10px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+         
+        }
+      }  
+  .meals .price {
+    padding-top: 55px;
+    padding-right: 10px;
+    font-size: 17px;
+  }
+  @keyframes coche {
+  0% {
+     transform: translate(-60px);
+    }
+  100% {
+      transform: translate(0px);
+    }
+  }
+  .meals .price:hover{
+    padding-top: 25px;
+    padding-right: 26px;
+    right:65px;
+    animation: coches 1s 1  forwards;
+    
+    }
+  @keyframes coches {
+    0% {
+        transform: translate(65px);
+    }
+    100% {
+        transform: translate(0px);
+    }
+  }
+ 
+  .meals .food:hover {
+    animation: moveh 1s 1 forwards;
+    -webkit-animation: moveh 1s 1 forwards;
+  }
+
+  @keyframes moveh {
+    0% {
+      width: 300px;
+    }
+    100% {
+      width: 225px;
+    }
+  }
+  @-webkit-keyframes moveh {
+    0% {
+      width: 300px;
+    }
+    100% {
+      width: 225px;
+    }
+  }
+  @keyframes move {
+    0% {
+      width: 285px;
+    }
+    100% {
+      width: 325px;
+    }
+  }
+  @-webkit-keyframes move {
+    0% {
+      width: 225px;
+    }
+    100% {
+      width: 300px;
+    }
+  }
+  
+  .meals .btn_circle {
+    background-color: #99E2D0;
+    font-size: 40px;
+    border-radius: 0 15px 15px 0;
+    position: relative;
+    height: auto;
+    right: 0;
+    padding-bottom: 0;
+    width: 0;
+    } 
+  @-webkit-keyframes moving {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 65px;
+    }
+  }
+  @keyframes moving {
+    0% {
+      width: 65px;
+    }
+    100% {
+      width: 0px;
+    }
+  }
+  .meals .btn_circle:hover{
+    
+    -webkit-animation: movingh 1s  1 forwards;
+    animation: movingh 1s 1  forwards;
+    width: 85px;
+    height: 100%;
+    padding-bottom: 0;
+  }
+  @-webkit-keyframes movingh {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 65px;
+    }
+  }
+  @keyframes movingh {
+    0% {
+      padding-bottom: 5px !important;
+      width: 0px;
+    }
+    100% {
+      padding-bottom: 5px !important;
+      width: 65px;
+    }
+  }
+  
+  .btn_circle .fa-check-circle {
+    color: #fff;
+    font-size: 25px;
+    color: white;
+    opacity: 0;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    transition: all 5s 1;
+    }
+  
+  @keyframes rotates {
+    0% {
+      opacity: 1;
+      transform: translate(-15px);
+      transform: rotate(360deg);
+    }
+    100% {
+      opacity: 0;
+      transform: translate(-15px);
+      transform: rotate(0deg);
+    }
+  }
+  .btn_circle .fa-check-circle:hover{
+    opacity: 1;
+    right: 15px;
+    opacity: 100;
+    animation: rotatesh 1s 1 forwards;
+     transform: rotate(360deg);
+  }
+  @keyframes rotatesh {
+    0% {
+      opacity: 0;
+      transform: translate(0px);
+      transform: rotate(0deg);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-15px);
+      transform: rotate(360deg);
+    }
+  }
+ 
+ 
   .to_explore{
     .order{
       font-size: 18px;
