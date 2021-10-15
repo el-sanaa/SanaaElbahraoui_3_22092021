@@ -441,8 +441,6 @@ h3 {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   width: 95%;
-  animation: move 1s 1;
-  -webkit-animation: move 1s 1;
 }
 .meals .food h4 {
   font-weight: 700;
@@ -462,6 +460,27 @@ h3 {
   white-space: nowrap;
 }
 
+.meals .food:hover {
+  animation: moveh 1s 1 forwards;
+  -webkit-animation: moveh 1s 1 forwards;
+}
+
+@keyframes moveh {
+  0% {
+    width: 300px;
+  }
+  100% {
+    width: 225px;
+  }
+}
+@-webkit-keyframes moveh {
+  0% {
+    width: 300px;
+  }
+  100% {
+    width: 225px;
+  }
+}
 .meals .price {
   padding-top: 70px;
   padding-right: 26px;
@@ -514,27 +533,6 @@ h3 {
   }
   100% {
     transform: translate(0px);
-  }
-}
-.meals .food:hover {
-  animation: moveh 1s 1 forwards;
-  -webkit-animation: moveh 1s 1 forwards;
-}
-
-@keyframes moveh {
-  0% {
-    width: 300px;
-  }
-  100% {
-    width: 225px;
-  }
-}
-@-webkit-keyframes moveh {
-  0% {
-    width: 300px;
-  }
-  100% {
-    width: 225px;
   }
 }
 @keyframes move {
@@ -1117,23 +1115,14 @@ footer .information {
     font-weight: normal;
   }
 
-  .meals {
-    display: flex;
-    flex-direction: row;
-    border-radius: 15px 15px;
-    background-color: white;
-    cursor: pointer;
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-    box-shadow: 0 7px 10px -6px grey;
-    -webkit-box-shadow: 0 7px 10px -6px grey;
-    margin: 5px 20px 20px 20px;
-    justify-content: space-between;
+  .meal {
     animation: fadein 5s;
     -moz-animation: fadein 5s;
     /* Firefox */
     -webkit-animation: fadein 5s;
     /* Safari et Chrome */
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
   }
 
   @keyframes fadein {
@@ -1153,12 +1142,29 @@ footer .information {
       opacity: 1;
     }
   }
+  .meals {
+    display: flex;
+    flex-direction: row;
+    border-radius: 15px 15px;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: 0 7px 10px -6px grey;
+    -webkit-box-shadow: 0 7px 10px -6px grey;
+    margin: 5px 20px 20px 20px;
+    justify-content: space-between;
+  }
+  .meals:hover :nth-child(3) {
+    margin-right: -16px;
+  }
+  .meals:hover :nth-child(3) :nth-child(1) {
+    transform: rotate(360deg);
+  }
   .meals .food {
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    width: 95%;
-    animation: move 1s 1;
-    -webkit-animation: move 1s 1;
+    margin: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    flex: 1;
   }
   .meals .food h4 {
     font-weight: 700;
@@ -1177,215 +1183,39 @@ footer .information {
     text-overflow: ellipsis;
     white-space: nowrap;
   }
-
   .meals .price {
     padding-top: 55px;
-    padding-right: 10px;
+    padding-right: 30px;
     font-size: 17px;
-  }
-
-  @-webkit-keyframes coche {
-    0% {
-      transform: translate(-60px);
-    }
-    100% {
-      transform: translate(0px);
-    }
-  }
-
-  @keyframes coche {
-    0% {
-      transform: translate(-60px);
-    }
-    100% {
-      transform: translate(0px);
-    }
-  }
-  .meals .price:hover {
-    padding-top: 25px;
-    padding-right: 26px;
-    right: 65px;
-    -webkit-animation: coches 1s 1 forwards;
-            animation: coches 1s 1 forwards;
-  }
-
-  @-webkit-keyframes coches {
-    0% {
-      transform: translate(65px);
-    }
-    100% {
-      transform: translate(0px);
-    }
-  }
-
-  @keyframes coches {
-    0% {
-      transform: translate(65px);
-    }
-    100% {
-      transform: translate(0px);
-    }
-  }
-  .meals .food:hover {
-    animation: moveh 1s 1 forwards;
-    -webkit-animation: moveh 1s 1 forwards;
-  }
-
-  @keyframes moveh {
-    0% {
-      width: 300px;
-    }
-    100% {
-      width: 225px;
-    }
-  }
-  @-webkit-keyframes moveh {
-    0% {
-      width: 300px;
-    }
-    100% {
-      width: 225px;
-    }
-  }
-  @keyframes move {
-    0% {
-      width: 285px;
-    }
-    100% {
-      width: 325px;
-    }
-  }
-  @-webkit-keyframes move {
-    0% {
-      width: 225px;
-    }
-    100% {
-      width: 300px;
-    }
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-bottom: 10px;
   }
   .meals .btn_circle {
     background-color: #99E2D0;
-    font-size: 40px;
+    display: flex;
     border-radius: 0 15px 15px 0;
     position: relative;
-    height: auto;
-    right: 0;
-    padding-bottom: 0;
-    width: 0;
+    margin: 0px -90px 0px 10px;
+    width: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: 0.5s;
+  }
+  .meals .btn_circle .icon {
+    overflow: hidden;
+    height: 1.6rem;
+    width: 1.6rem;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    transition-duration: 0.5s;
   }
 
-  @-webkit-keyframes moving {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 65px;
-    }
-  }
-  @keyframes moving {
-    0% {
-      width: 65px;
-    }
-    100% {
-      width: 0px;
-    }
-  }
-  .meals .btn_circle:hover {
-    -webkit-animation: movingh 1s 1 forwards;
-    animation: movingh 1s 1 forwards;
-    width: 85px;
-    height: 100%;
-    padding-bottom: 0;
-  }
-
-  @-webkit-keyframes movingh {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 65px;
-    }
-  }
-  @keyframes movingh {
-    0% {
-      padding-bottom: 5px !important;
-      width: 0px;
-    }
-    100% {
-      padding-bottom: 5px !important;
-      width: 65px;
-    }
-  }
-  .btn_circle .fa-check-circle {
-    color: #fff;
-    font-size: 25px;
-    color: white;
-    opacity: 0;
-    position: absolute;
-    top: 5px;
-    right: 15px;
-    transition: all 5s 1;
-  }
-
-  @-webkit-keyframes rotates {
-    0% {
-      opacity: 1;
-      transform: translate(-15px);
-      transform: rotate(360deg);
-    }
-    100% {
-      opacity: 0;
-      transform: translate(-15px);
-      transform: rotate(0deg);
-    }
-  }
-
-  @keyframes rotates {
-    0% {
-      opacity: 1;
-      transform: translate(-15px);
-      transform: rotate(360deg);
-    }
-    100% {
-      opacity: 0;
-      transform: translate(-15px);
-      transform: rotate(0deg);
-    }
-  }
-  .btn_circle .fa-check-circle:hover {
-    opacity: 1;
-    right: 15px;
-    opacity: 100;
-    -webkit-animation: rotatesh 1s 1 forwards;
-            animation: rotatesh 1s 1 forwards;
-    transform: rotate(360deg);
-  }
-
-  @-webkit-keyframes rotatesh {
-    0% {
-      opacity: 0;
-      transform: translate(0px);
-      transform: rotate(0deg);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(-15px);
-      transform: rotate(360deg);
-    }
-  }
-
-  @keyframes rotatesh {
-    0% {
-      opacity: 0;
-      transform: translate(0px);
-      transform: rotate(0deg);
-    }
-    100% {
-      opacity: 1;
-      transform: translate(-15px);
-      transform: rotate(360deg);
-    }
-  }
   .to_explore .order {
     font-size: 18px;
     width: 200px;
