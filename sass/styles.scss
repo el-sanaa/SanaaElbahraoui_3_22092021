@@ -427,7 +427,13 @@
         opacity:1;
     }
   }
-      
+      &:hover :nth-child(3){
+        margin-right: -16px;
+
+      &:hover :nth-child(1){
+          transform: rotate(360deg);
+        }
+      }
       .food{
         margin: 0;
         white-space: nowrap;
@@ -481,7 +487,7 @@
           overflow: hidden;
           height: 1.6rem;
           width: 1.6rem;
-          background-color: #fff;
+         
           display: flex;
           align-items: center;
           justify-content: center;
@@ -988,11 +994,10 @@
               color: white;
               }
               .btn_circle .icon{
-              font-size: 20px;  
+              font-size: 30px;  
               overflow: hidden;
-              height: 1.6rem;
-              width: 1.6rem;
-              background-color: #fff;
+              height: 25px;
+              width: 25px;
               display: flex;
               align-items: center;
               justify-content: center;

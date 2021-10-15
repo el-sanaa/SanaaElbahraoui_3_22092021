@@ -436,6 +436,12 @@ h3 {
     opacity: 1;
   }
 }
+.meals:hover :nth-child(3) {
+  margin-right: -16px;
+}
+.meals:hover :nth-child(3):hover :nth-child(1) {
+  transform: rotate(360deg);
+}
 .meals .food {
   margin: 0;
   white-space: nowrap;
@@ -487,7 +493,6 @@ h3 {
   overflow: hidden;
   height: 1.6rem;
   width: 1.6rem;
-  background-color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1016,11 +1021,10 @@ footer .information {
     color: white;
   }
   .meals .btn_circle .icon {
-    font-size: 20px;
+    font-size: 30px;
     overflow: hidden;
-    height: 1.6rem;
-    width: 1.6rem;
-    background-color: #fff;
+    height: 25px;
+    width: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
