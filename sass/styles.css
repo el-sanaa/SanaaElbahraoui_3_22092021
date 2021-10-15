@@ -485,14 +485,14 @@ h3 {
   justify-content: center;
   transition-duration: 0.5s;
   margin: 0px -90px 0px 10px;
-  width: 60px;
+  width: 70px;
   color: white;
   font-size: 40px;
 }
 .meals .btn_circle .icon {
   overflow: hidden;
-  height: 1.6rem;
-  width: 1.6rem;
+  height: 45px;
+  width: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -735,6 +735,14 @@ footer {
   .heart {
     font-size: 32px;
     padding-right: 20px;
+  }
+
+  .meals .btn_circle {
+    width: 70px;
+  }
+  .meals .btn_circle .icon {
+    height: 40px;
+    width: 40px;
   }
 }
 @media (min-width: 375px) and (max-width: 648.98px) {
