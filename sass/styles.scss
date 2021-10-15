@@ -427,13 +427,7 @@
         opacity:1;
     }
   }
-      &:hover :nth-child(3){
-        margin-right: -16px;
-
-        :nth-child(1){
-          transform: rotate(360deg);
-        }
-      }
+      
       .food{
         margin: 0;
         white-space: nowrap;
@@ -943,13 +937,7 @@
       }
     }
     
-        &:hover :nth-child(3){
-          margin-right: -16px;
-
-         &:hover :nth-child(3){
-            transform: rotate(360deg);
-          }
-        }
+        
         .food{
           margin: 0;
           white-space: nowrap;
@@ -1011,6 +999,7 @@
               border-radius: 100px;
               transition-duration: 0.5s;
               }
+              
           }    
   
   .to_explore{
