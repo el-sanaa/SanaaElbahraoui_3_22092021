@@ -981,6 +981,12 @@ footer .information {
       opacity: 1;
     }
   }
+  .meals:hover :nth-child(3) {
+    margin-right: -16px;
+  }
+  .meals:hover :nth-child(3):hover :nth-child(1) {
+    transform: rotate(360deg);
+  }
   .meals .food {
     margin: 0;
     white-space: nowrap;
@@ -1020,7 +1026,7 @@ footer .information {
     border-radius: 0 15px 15px 0;
     position: relative;
     margin: 0px -90px 0px 10px;
-    width: 4rem;
+    width: 64px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1031,8 +1037,8 @@ footer .information {
   .meals .btn_circle .icon {
     font-size: 30px;
     overflow: hidden;
-    height: 25px;
-    width: 25px;
+    height: 30px;
+    width: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
