@@ -37,10 +37,11 @@
     box-shadow: inset 0 7px 10px -6px grey;
     font-weight: 700;
     font-size: 30px;
-  }
-  .location .fasgps {
-    padding-right: 10px;
-  }
+  
+         .fasgps {
+          padding-right: 10px;
+        }
+      }  
   a{
     font-family: "Roboto", sans-serif;
     margin: 0;
@@ -187,54 +188,54 @@
     padding-bottom: 40px;
     margin-right: 15px;
     margin-left: 15px;
-      .card{
-      border-radius: 20px;
-      background-color: #F5F5F5;
-      overflow: hidden;
-      height: 330px;
-      color: black;
-      text-decoration: none;
-      margin: 20px 20px;
-      width: auto;
-      position: relative;
-      }
-      .card img{
-        width: 100%;
-        height: 70%;
-        }    
-      .card:hover{
-        -webkit-transform: scale(1.05);
-        transform: scale(1.05);
-        }
-     
-      .card_detail {
-        color: black;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        background-color: white;
-        border-radius: 0 0 15px 15px;
-        box-shadow: 0 7px 10px -6px grey;
-        -webkit-box-shadow: 0 7px 10px -6px grey;
-        width: 100%;
-      }
-      .card_name {
-        width: 80%;
-        padding-top: 0;
-        padding-bottom: 15px;
-        padding-left: 15px;
-          h2{
-            margin-bottom: 10px;
-            font-size: 18px;
+          .card{
+          border-radius: 20px;
+          background-color: #F5F5F5;
+          overflow: hidden;
+          height: 330px;
+          color: black;
+          text-decoration: none;
+          margin: 20px 20px;
+          width: auto;
+          position: relative;
           }
-          p{
-            font-size: 17px;
-           }
-      }  
+          .card img{
+            width: 100%;
+            height: 70%;
+            }    
+          .card:hover{
+            -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+            }
+        
+          .card_detail {
+            color: black;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            background-color: white;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 7px 10px -6px grey;
+            -webkit-box-shadow: 0 7px 10px -6px grey;
+            width: 100%;
+          }
+          .card_name {
+            width: 80%;
+            padding-top: 0;
+            padding-bottom: 15px;
+            padding-left: 15px;
+              h2{
+                margin-bottom: 10px;
+                font-size: 18px;
+              }
+              p{
+                font-size: 17px;
+              }
+          }  
       .heart {
         width: 20%;
         font-size: 30px;
@@ -396,6 +397,7 @@
     border-radius: 15px 15px;
     background-color: white;
     cursor: pointer;
+    overflow: clip;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     box-shadow: 0 7px 10px -6px grey;
@@ -696,12 +698,10 @@
   }
 
 /*pages restaurants*/
-  .logoheader{
-    .logo{
+  .logoheader .logo{
       padding-top: 20px;
     }
-  }
-  .picture{
+   .picture{
     height: 390px;
     width: 100%;
   }
@@ -731,7 +731,7 @@
   }
   .logoheader .logo{
     font-size: 40px;
-    }
+  }
   .fasgps{
     font-size: 21px;
   }
