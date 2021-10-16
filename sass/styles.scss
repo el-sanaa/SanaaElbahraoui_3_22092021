@@ -119,12 +119,19 @@
     padding-bottom: 30px;
     margin-right: 20px;
   }
-  .step:hover .choicebtn, .step:hover .compositionbtn, .step:hover .tastingbtn {
+  .step:hover .choicebtn, .step:hover .compositionbtn, 
+  .step:hover .tastingbtn {
     background-color: #f0dbff;
-  }
+   }
   a {
     text-decoration: none;
-  } 
+     } 
+  .compositionbtn:hover :nth-child(2),
+  .choicebtn:hover :nth-child(2),
+  .tastingbtn:hover :nth-child(2){
+    color: #9356dc;
+  }
+
   .choicebtn, .compositionbtn, .tastingbtn{
     text-align: left;
     padding-top: 30px;
@@ -154,12 +161,8 @@
     padding-right: 15px;
     color: grey;
     font-size: 18px;
-  }
-  .fa-mobile-alt:hover,.fa-list:hover, 
-  .fa-store:hover{
-    color: #9356DC;
-    cursor: pointer;
-  }
+    }
+  
   .fbtn{
     font-size: 18px;
     font-weight: 700;
@@ -200,8 +203,8 @@
         height: 70%;
         }    
       .card:hover{
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
+        -webkit-transform: scale(1.05);
+        transform: scale(1.05);
         }
      
       .card_detail {
@@ -280,48 +283,48 @@
       a{
         color: white;
       }
-    .logoend{
-      text-align: center;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      font-size: 40px;
-      font-family: 'Shrikhand', sans-serif;
-      }
-      .commercial_link {
-        padding-bottom: 5px;
-        text-align: center;
-        font-size: 30px;
-
-        .fa-utensils {
-          padding-right: 13px;
-        }
-      }
-      .commercial_linktwo {
-        text-align: center;
-        font-size: 30px;
-        
-        .fa-handshake {
-          padding-right: 7px;
-          padding-bottom: 5px;
+        .logoend{
+          text-align: center;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          font-size: 40px;
+          font-family: 'Shrikhand', sans-serif;
           }
-      }
-     .information {
-        padding-bottom: 5px;
-        text-align: center;
-        font-size: 30px;
-      }
-      .contact {
-        padding-bottom: 30px;
-        text-align: center;
-        font-size: 30px;
-      }
-  }    
+          .commercial_link {
+            padding-bottom: 5px;
+            text-align: center;
+            font-size: 30px;
+
+            .fa-utensils {
+              padding-right: 13px;
+            }
+          }
+          .commercial_linktwo {
+            text-align: center;
+            font-size: 30px;
+            
+            .fa-handshake {
+              padding-right: 7px;
+              padding-bottom: 5px;
+              }
+          }
+        .information {
+            padding-bottom: 5px;
+            text-align: center;
+            font-size: 30px;
+          }
+        .contact {
+            padding-bottom: 30px;
+            text-align: center;
+            font-size: 30px;
+          }
+      }    
 
 
 /*pages restaurants*/
   .picture{
-    width: 100%;
-    height: 700px;
+    max-width: 100%;
+    max-height: 700px;
     background-repeat: no-repeat;
     object-fit: cover;
     cursor: pointer;
@@ -355,15 +358,16 @@
     border-radius: 50px 50px 0 0;
     background-color: #f5f5f5;
     margin-top: -50px;
-  }
-  .presentation{
-    font-family: 'Shrikhand', sans-serif;
-    font-style: italic;
-    font-size: 40px;
-    padding-left: 15px;
-    padding-right: 45px;
-    padding-top: 40px;
-  }
+ 
+        .presentation{
+          font-family: 'Shrikhand', sans-serif;
+          font-style: italic;
+          font-size: 40px;
+          padding-left: 15px;
+          padding-right: 45px;
+          padding-top: 40px;
+        }
+      }  
   .heart{
     padding-left: 20px;
     font-size: 40px;
@@ -429,11 +433,11 @@
   }
       &:hover :nth-child(3){
         margin-right: -16px;
-
-      &:hover :nth-child(1){
-          transform: rotate(360deg);
         }
-      }
+        &:hover :nth-child(1){
+              transform: rotate(360deg);
+            }
+          
       .food{
         margin: 0;
         white-space: nowrap;
@@ -462,7 +466,7 @@
           
       .price {
         padding-top: 70px;
-        padding-right: 26px;
+        margin-right: 30px;
         font-size: 20px;
         display: flex;
         justify-content: flex-end;
@@ -478,7 +482,7 @@
         align-items: center;
         justify-content: center;
         transition-duration: 0.5s;
-        margin: 0px -90px 0px 10px;
+        margin-right: -110px;
         width: 70px;
         color: white;
         font-size: 40px;
@@ -599,25 +603,11 @@
 
 @media (min-width: 1024px) and (max-width: 1529.98px){
  
-  /*page accueil*/
-  .fa-mobile-alt {
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 15px;
-  }
-  .fa-list {
-    padding-left: 15px;
-    padding-right: 15px;
-    color: grey;
-    font-size: 15px;
-  }
-  .fa-store {
-    padding-left: 15px;
-    padding-right: 15px;
-    color: grey;
-    font-size: 15px;
-  }
-  .number{
+    /*page accueil*/
+    .fa-mobile-alt, .fa-store, .fa-list {
+       font-size: 15px;
+    }
+    .number{
     font-size: 15px;
   }
   .fbtn{
@@ -643,6 +633,9 @@
   .heart{
     padding-right: 100px;
   }
+  .meals .btn_circle {
+    margin-right: -90px;
+    }
   
 }
 
@@ -675,12 +668,20 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+  .number{
+    padding: 7px 13px;
+    font-size: 16px;
+  }
+  .fbtn{
+    font-size: 16px;
+  }
   .cards{
-    margin: 20px 20px;
-  }
-  .cards .card{
-    height: 300px;
-  }
+    margin: 20px 20px 0 20px;
+  
+       .card{
+          height: 300px;
+        }
+      }  
   .card_detail p{
     font-size: 17px;
     margin-bottom: 5px;
@@ -691,6 +692,7 @@
   .heart{
     font-size: 37px;
     padding-right: 0;
+    
   }
 
 /*pages restaurants*/
@@ -701,6 +703,7 @@
   }
   .picture{
     height: 390px;
+    width: 100%;
   }
   .presentation{
     font-size: 35px;
@@ -708,21 +711,18 @@
   }
   .heart{
     font-size: 32px;
-    padding-right: 20px;
+    padding-right: 30px;
     }
-  .meals{
-      .btn_circle{
+  .meals .btn_circle{
         width: 70px;
+        margin-right: -90px;
           
             .icon{
               height: 40px;
               width: 40px;
             }
           }
-      }
-  
-  
-}
+     }
 
 @media (min-width: 375px) and (max-width: 648.98px){
   /*page accueil*/
@@ -731,7 +731,7 @@
   }
   .logoheader .logo{
     font-size: 40px;
-  }
+    }
   .fasgps{
     font-size: 21px;
   }
@@ -769,22 +769,26 @@
         width: auto;
         padding-bottom: 10px;
       }
-      .fa-list, .fa-store, .fa-mobile-alt {
-        font-size: 18px;
-      }
-    }
-      
-  .fa-list:hover, .fa-store:hover, .fa-mobile-alt:hover {
-    color: #BA55D3;
-  }
-  .fbtn{
-    font-size: 16px;
-    font-weight: 700;
     }
   .choicebtn, .compositionbtn, .tastingbtn{
       padding-top: 25px;
-      padding-bottom: 25px; 
-    }
+      padding-bottom: 25px;
+        .fbtn{
+          font-size: 16px;
+          font-weight: 700;
+          }
+          .number{
+            font-size: 12px;
+            padding: 6px 12px;
+          } 
+          .fa-list, .fa-mobile-alt, .fa-mobile-alt{
+            font-size: 16px;
+           } 
+          .fa-list:hover{    
+            color: #9356DC ;
+            cursor: pointer;
+          }
+     }
   .restaurants{
       margin-top: 30px;
       .restaurant{
@@ -794,6 +798,7 @@
         padding-top: 55px;
         padding-bottom: 0;
         padding-left: 35px;
+        width: auto;
      }
   }  
   .cards {
@@ -806,16 +811,10 @@
      .card{
         height: 260px;
       }
-      .card img{
+       .card img{
         height: 68%;
       }
       .card_detail {
-        color: black;
-        display: flex;
-        flex-direction: row;
-        background-color: white;
-        border-radius: 0 0 15px 15px;
-        box-shadow: 0 7px 10px -6px grey;
         margin-bottom: 15px;
         width: 100%;
         height: 32%;
@@ -879,7 +878,8 @@
           }
     }      
  
-  /*Pages restaurants*/
+ /*Pages restaurants*/
+
   .logoheader{
     .logo{
       font-size: 30px;
@@ -897,130 +897,55 @@
     height: 260px;
     object-fit: cover;
   }
-  .presentation{
-     font-size: 22px;
-     padding-left: 15px;
-   }
+  .presentations{
+      .presentation{
+        font-size: 22px;
+        padding-left: 15px;
+      }
+     } 
    .heart{
-     padding-top: 35px;
+     padding-top: 40px;
      text-align: left;
-     padding-right: 60px;
-     font-size: 30px;
+     padding-right: 40px;
+     font-size: 24px;
     }
    h3{
      display: inline-block;
      font-size: 18px;
      font-weight: normal;
    }
-    
-   .meals{
-    display: flex;
-    flex-direction: row;
-    border-radius: 15px 15px;
-    background-color: white;
-    cursor: pointer;
-     box-shadow: 0 7px 10px -6px grey;
-    -webkit-box-shadow:0 7px 10px -6px grey;
-    margin: 5px 20px 20px 20px;
-    justify-content: space-between;
-    animation: fadein 5s;
-    -moz-animation: fadein 5s; /* Firefox */
-    -webkit-animation: fadein 5s; /* Safari et Chrome */
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-
-    @keyframes fadein {
-      from {
-          opacity:0;
-      }
-      to {
-          opacity:1;
-      }
-    }
-    @-moz-keyframes fadein { /* sur Firefox */
-      from {
-          opacity:0;
-      }
-      to {
-          opacity:1;
-      }
-    }
-    @-webkit-keyframes fadein { /* sur Safari et Chrome */
-      from {
-          opacity:0;
-      }
-      to {
-          opacity:1;
-      }
-    }
-        &:hover :nth-child(3){
-          margin-right: -16px;
-
-        &:hover :nth-child(1){
-            transform: rotate(360deg);
-          }
-        }
-        
-        .food{
-          margin: 0;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          flex: 1;
-        
+    .meals{
+        .food{    
               h4{
                 font-weight: 700;
                 font-size: 18px;
                 margin-bottom: 10px;
                 padding-left: 10px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap; 
-                  }
+                 }
               p{
                 font-size: 15px;
                 padding-left: 10px;
                 padding-bottom: 10px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-              
-                   }
+                  }
                 } 
           .price{
             padding-top: 55px;
-            padding-right: 30px;
+            margin-right: 30px;
             font-size: 17px;
             display: flex;
-            justify-content: flex-end;
-            align-items: flex-end;
             margin-bottom: 10px;
           }
           .btn_circle {
-              background-color: #99E2D0;
-              display: flex;
-              border-radius: 0 15px 15px 0;
-              position: relative;
-              margin: 0px -90px 0px 10px;
               width: 64px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              transition-duration: 0.5s;
               font-size: 30px;
-              color: white;
+              margin-right: -85px;
+
               
                .icon{
               font-size: 30px;  
-              overflow: hidden;
               height: 30px;
               width: 30px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              border-radius: 100px;
-              transition-duration: 0.5s;
-              }
+               }
             }  
           }    
   

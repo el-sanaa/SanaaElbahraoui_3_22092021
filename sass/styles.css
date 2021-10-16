@@ -123,12 +123,19 @@ i {
   margin-right: 20px;
 }
 
-.step:hover .choicebtn, .step:hover .compositionbtn, .step:hover .tastingbtn {
+.step:hover .choicebtn, .step:hover .compositionbtn,
+.step:hover .tastingbtn {
   background-color: #f0dbff;
 }
 
 a {
   text-decoration: none;
+}
+
+.compositionbtn:hover :nth-child(2),
+.choicebtn:hover :nth-child(2),
+.tastingbtn:hover :nth-child(2) {
+  color: #9356dc;
 }
 
 .choicebtn, .compositionbtn, .tastingbtn {
@@ -162,12 +169,6 @@ a {
   padding-right: 15px;
   color: grey;
   font-size: 18px;
-}
-
-.fa-mobile-alt:hover, .fa-list:hover,
-.fa-store:hover {
-  color: #9356DC;
-  cursor: pointer;
 }
 
 .fbtn {
@@ -212,7 +213,7 @@ a {
   height: 70%;
 }
 .cards .card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .cards .card_detail {
   color: black;
@@ -325,8 +326,8 @@ footer .contact {
 
 /*pages restaurants*/
 .picture {
-  width: 100%;
-  height: 700px;
+  max-width: 100%;
+  max-height: 700px;
   background-repeat: no-repeat;
   -o-object-fit: cover;
      object-fit: cover;
@@ -365,8 +366,7 @@ footer .contact {
   background-color: #f5f5f5;
   margin-top: -50px;
 }
-
-.presentation {
+.presentations .presentation {
   font-family: "Shrikhand", sans-serif;
   font-style: italic;
   font-size: 40px;
@@ -439,7 +439,7 @@ h3 {
 .meals:hover :nth-child(3) {
   margin-right: -16px;
 }
-.meals:hover :nth-child(3):hover :nth-child(1) {
+.meals:hover :nth-child(1) {
   transform: rotate(360deg);
 }
 .meals .food {
@@ -468,7 +468,7 @@ h3 {
 }
 .meals .price {
   padding-top: 70px;
-  padding-right: 26px;
+  margin-right: 30px;
   font-size: 20px;
   display: flex;
   justify-content: flex-end;
@@ -484,7 +484,7 @@ h3 {
   align-items: center;
   justify-content: center;
   transition-duration: 0.5s;
-  margin: 0px -90px 0px 10px;
+  margin-right: -110px;
   width: 70px;
   color: white;
   font-size: 40px;
@@ -617,23 +617,7 @@ footer {
 }
 @media (min-width: 1024px) and (max-width: 1529.98px) {
   /*page accueil*/
-  .fa-mobile-alt {
-    padding-left: 15px;
-    padding-right: 15px;
-    font-size: 15px;
-  }
-
-  .fa-list {
-    padding-left: 15px;
-    padding-right: 15px;
-    color: grey;
-    font-size: 15px;
-  }
-
-  .fa-store {
-    padding-left: 15px;
-    padding-right: 15px;
-    color: grey;
+  .fa-mobile-alt, .fa-store, .fa-list {
     font-size: 15px;
   }
 
@@ -664,6 +648,10 @@ footer {
 
   .heart {
     padding-right: 100px;
+  }
+
+  .meals .btn_circle {
+    margin-right: -90px;
   }
 }
 @media (min-width: 650px) and (max-width: 1023.98px) {
@@ -696,10 +684,18 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .cards {
-    margin: 20px 20px;
+  .number {
+    padding: 7px 13px;
+    font-size: 16px;
   }
 
+  .fbtn {
+    font-size: 16px;
+  }
+
+  .cards {
+    margin: 20px 20px 0 20px;
+  }
   .cards .card {
     height: 300px;
   }
@@ -725,6 +721,7 @@ footer {
 
   .picture {
     height: 390px;
+    width: 100%;
   }
 
   .presentation {
@@ -734,11 +731,12 @@ footer {
 
   .heart {
     font-size: 32px;
-    padding-right: 20px;
+    padding-right: 30px;
   }
 
   .meals .btn_circle {
     width: 70px;
+    margin-right: -90px;
   }
   .meals .btn_circle .icon {
     height: 40px;
@@ -798,22 +796,25 @@ footer {
     width: auto;
     padding-bottom: 10px;
   }
-  .steps .fa-list, .steps .fa-store, .steps .fa-mobile-alt {
-    font-size: 18px;
-  }
-
-  .fa-list:hover, .fa-store:hover, .fa-mobile-alt:hover {
-    color: #BA55D3;
-  }
-
-  .fbtn {
-    font-size: 16px;
-    font-weight: 700;
-  }
 
   .choicebtn, .compositionbtn, .tastingbtn {
     padding-top: 25px;
     padding-bottom: 25px;
+  }
+  .choicebtn .fbtn, .compositionbtn .fbtn, .tastingbtn .fbtn {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .choicebtn .number, .compositionbtn .number, .tastingbtn .number {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+  .choicebtn .fa-list, .choicebtn .fa-mobile-alt, .choicebtn .fa-mobile-alt, .compositionbtn .fa-list, .compositionbtn .fa-mobile-alt, .compositionbtn .fa-mobile-alt, .tastingbtn .fa-list, .tastingbtn .fa-mobile-alt, .tastingbtn .fa-mobile-alt {
+    font-size: 16px;
+  }
+  .choicebtn .fa-list:hover, .compositionbtn .fa-list:hover, .tastingbtn .fa-list:hover {
+    color: #9356DC;
+    cursor: pointer;
   }
 
   .restaurants {
@@ -826,6 +827,7 @@ footer {
     padding-top: 55px;
     padding-bottom: 0;
     padding-left: 35px;
+    width: auto;
   }
 
   .cards {
@@ -842,12 +844,6 @@ footer {
     height: 68%;
   }
   .cards .card_detail {
-    color: black;
-    display: flex;
-    flex-direction: row;
-    background-color: white;
-    border-radius: 0 0 15px 15px;
-    box-shadow: 0 7px 10px -6px grey;
     margin-bottom: 15px;
     width: 100%;
     height: 32%;
@@ -928,16 +924,16 @@ footer .information {
        object-fit: cover;
   }
 
-  .presentation {
+  .presentations .presentation {
     font-size: 22px;
     padding-left: 15px;
   }
 
   .heart {
-    padding-top: 35px;
+    padding-top: 40px;
     text-align: left;
-    padding-right: 60px;
-    font-size: 30px;
+    padding-right: 40px;
+    font-size: 24px;
   }
 
   h3 {
@@ -946,104 +942,33 @@ footer .information {
     font-weight: normal;
   }
 
-  .meals {
-    display: flex;
-    flex-direction: row;
-    border-radius: 15px 15px;
-    background-color: white;
-    cursor: pointer;
-    box-shadow: 0 7px 10px -6px grey;
-    -webkit-box-shadow: 0 7px 10px -6px grey;
-    margin: 5px 20px 20px 20px;
-    justify-content: space-between;
-    animation: fadein 5s;
-    -moz-animation: fadein 5s;
-    /* Firefox */
-    -webkit-animation: fadein 5s;
-    /* Safari et Chrome */
-    transition: all 0.5s;
-    -webkit-transition: all 0.5s;
-  }
-  @keyframes fadein {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  @-webkit-keyframes fadein {
-    /* sur Safari et Chrome */
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-  .meals:hover :nth-child(3) {
-    margin-right: -16px;
-  }
-  .meals:hover :nth-child(3):hover :nth-child(1) {
-    transform: rotate(360deg);
-  }
-  .meals .food {
-    margin: 0;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    flex: 1;
-  }
   .meals .food h4 {
     font-weight: 700;
     font-size: 18px;
     margin-bottom: 10px;
     padding-left: 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
   .meals .food p {
     font-size: 15px;
     padding-left: 10px;
     padding-bottom: 10px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
   .meals .price {
     padding-top: 55px;
-    padding-right: 30px;
+    margin-right: 30px;
     font-size: 17px;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
     margin-bottom: 10px;
   }
   .meals .btn_circle {
-    background-color: #99E2D0;
-    display: flex;
-    border-radius: 0 15px 15px 0;
-    position: relative;
-    margin: 0px -90px 0px 10px;
     width: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition-duration: 0.5s;
     font-size: 30px;
-    color: white;
+    margin-right: -85px;
   }
   .meals .btn_circle .icon {
     font-size: 30px;
-    overflow: hidden;
     height: 30px;
     width: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100px;
-    transition-duration: 0.5s;
   }
 
   .to_explore .order {
